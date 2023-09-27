@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-body;
+}
+
+@media (min-width: theme('screens.lg')) {
+  :root {
+    --navbar-height: 6.5rem;
+    --footer-height: 5rem;
+    --chatbot-width: 0;
+  }
+}
+
+@media (min-width: theme('screens.sm')) {
+  :root {
+    --chatbot-width: 25rem;
+  }
+}
+
+#A1-web .display,
+#A1-web .MuiTypography-display {
+  @apply font-heading text-5xl leading-display font-bold tracking-tightest;
+}
+
+#A1-web h1,
+#A1-web .h1,
+#A1-web .MuiTypography-h1 {
+  @apply font-heading text-2xl lg:text-4xl font-bold leading-h1 tracking-tightest;
+}
+#A1-web h2,
+#A1-web .h2,
+#A1-web .MuiTypography-h2 {
+  @apply font-heading text-3xl font-bold leading-h2 tracking-tighter;
+}
+#A1-web h3,
+#A1-web .h3,
+#A1-web .MuiTypography-h3 {
+  @apply font-heading text-2xl font-bold leading-h3 tracking-tighter;
+}
+#A1-web .subtitle-1,
+#A1-web .MuiTypography-subtitle2 {
+  @apply font-heading text-xl font-bold leading-subtitle-1 tracking-tighter;
+}
+#A1-web .subtitle,
+#A1-web .MuiTypography-subtitle1 {
+  @apply font-heading text-lg font-bold leading-subtitle tracking-tighter;
+}
+#A1-web a,
+#A1-web .link {
+  @apply font-body text-sm font-semibold underline leading-link tracking-normal;
+}
+#A1-web .body-big,
+#A1-web .MuiTypography-body2 {
+  @apply font-body text-base font-normal leading-body-big tracking-wider;
+}
+
+#A1-web p,
+#A1-web .body,
+#A1-web .MuiTypography-body1 {
+  @apply font-body text-sm font-normal leading-body tracking-wide;
+}
+
+#A1-web caption,
+#A1-web .caption,
+#A1-web .MuiTypography-caption {
+  @apply font-body text-xs font-normal leading-caption tracking-wider;
+}
+
+#A1-web .MuiTypography-overline,
+#A1-web .MuiTypography-inherit {
+  @apply font-body;
+}
+
+.page-wrapper {
+  @apply min-h-[calc(100vh-var(--navbar-height)-var(--footer-height))] w-[calc(100%-var(--chatbot-width))] overflow-auto w-full;
+}
+
+#A1-web .light-heading {
+  @apply font-light;
+}
+
+.main-container {
+  @apply w-[calc(100%-var(--chatbot-width))];
+}
+
+#A1-web .markdown-body p,
+#A1-web .markdown-body ul,
+#A1-web .markdown-body ol{
+  @apply mb-4;
+}
+
+#A1-web .markdown-body ul {
+  @apply list-disc list-inside;
+}
+
+#A1-web .markdown-body ol {
+  @apply list-decimal list-inside;
+}

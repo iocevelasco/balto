@@ -1,0 +1,30 @@
+{
+  "title":"Work with us",
+  "description": "Join our team of exceptional remote professionals, working with inspiring clients. We pride ourselves on attracting top talent, delivering outstanding results, and fostering a dynamic and engaging work environment.",
+  "iconCards": [
+    {
+      "icon": "robot",
+      "text": "AI TOOLS FOR CODERS"
+    },
+    {
+      "icon": "fist",
+      "text": "CHALLENGING PROJECTS"
+    },
+    {
+      "icon": "smileyFace",
+      "text": "Great work environment"
+    },
+    {
+      "icon": "plant",
+      "text": "PROFESSIONAL GROWTH"
+    },
+    {
+      "icon": "teacher",
+      "text": "TECHNICAL TRAININGS"
+    },
+    {
+      "icon": "balance",
+      "text": "WORK-LIFE BALANCE"
+    }
+  ]
+}

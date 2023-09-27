@@ -1,0 +1,49 @@
+[
+  {
+    "id": 1,
+    "href": "/",
+    "text": "Home",
+    "component": "link"
+  },
+  {
+    "id": 2,
+    "href": "/who-we-are",
+    "text": "Who We Are",
+    "component": "link"
+  },
+  {
+    "id": 3,
+    "text": "Services",
+    "href": "/services",
+    "component": "button",
+    "subMenuItems": [
+      {
+        "id": 4,
+        "href": "/services/staff-augmentation",
+        "text": "Staff Augmentation"
+      },
+      {
+        "id": 5,
+        "href": "/services/custom-software",
+        "text": "Custom Software"
+      },
+      {
+        "id": 6,
+        "href": "/services/technical-assessments",
+        "text": "Technical Assessments"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "href": "/blog",
+    "text": "Blog",
+    "component": "link"
+  },
+  {
+    "id": 8,
+    "href": "/work-with-us",
+    "text": "Work With Us",
+    "component": "link"
+  }
+]

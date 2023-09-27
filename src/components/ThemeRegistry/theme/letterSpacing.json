@@ -1,0 +1,9 @@
+{
+  "tightest": "-3px",
+  "tighter": "-2%",
+  "tight": "-1px",
+  "normal": "0px",
+  "wide": "1px",
+  "wider": "2px",
+  "widest": "3px"
+}
