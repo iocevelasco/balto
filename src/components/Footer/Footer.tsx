@@ -24,7 +24,7 @@ export const AddressTag = ({ country, location }: AddressProps) => {
   )
 }
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer className="flex items-center justify-center sticky bottom-0 w-full p-2  pr-4 bg-gray-pale h-footer">
       <div className="container flex items-center justify-between">

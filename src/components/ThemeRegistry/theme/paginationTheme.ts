@@ -19,7 +19,7 @@ export default createTheme({
             color: colors.white,
             borderRadius: '5px',
             '&:hover': {
-              background: colors['green-primary'],
+              background: colors['dark-primary'],
               color: colors.black,
             },
           },

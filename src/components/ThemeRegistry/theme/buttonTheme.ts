@@ -43,12 +43,12 @@ export default createTheme({
         {
           props: { variant: 'contained' },
           style: {
-            backgroundColor: colors['green-primary'],
+            backgroundColor: colors['primary'],
             '&:hover': {
-              backgroundColor: colors['green-darker'],
+              backgroundColor: colors['dark-primary'],
             },
             '&:disabled': {
-              backgroundColor: colors['green-primary'],
+              backgroundColor: colors['gray-light'],
             },
           },
         },
@@ -56,14 +56,14 @@ export default createTheme({
           props: { variant: 'outlined' },
           style: {
             backgroundColor: colors.white,
-            border: `2px solid ${colors['green-primary']}`,
+            border: `2px solid ${colors['dark-primary']}`,
             '&:hover': {
               border: `2px solid ${colors['green-darker']}`,
               backgroundColor: colors.white,
             },
             '&:disabled': {
               backgroundColor: colors.white,
-              border: `2px solid ${colors['green-primary']}`,
+              border: `2px solid ${colors['dark-primary']}`,
             },
           },
         },
@@ -89,12 +89,12 @@ export default createTheme({
           style: {
             padding: '1.25rem',
             borderRadius: 999,
-            backgroundColor: colors['green-primary'],
+            backgroundColor: colors['dark-primary'],
             '&:hover': {
               backgroundColor: colors['green-darker'],
             },
             '&:disabled': {
-              backgroundColor: colors['green-primary'],
+              backgroundColor: colors['dark-primary'],
             },
             '& .MuiButton-endIcon': {
               marginLeft: '3.125rem',

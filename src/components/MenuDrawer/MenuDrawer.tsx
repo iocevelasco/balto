@@ -60,7 +60,7 @@ export default function MenuDrawer({
               </button>
             </div>
             <div className="flex flex-col items-end w-full">
-              <ul className="flex flex-col gap-y-[1.875rem] h-full w-full">
+              {/* <ul className="flex flex-col gap-y-[1.875rem] h-full w-full">
                 {menuItem.map((item) => (
                   <NavLink
                     onClick={handleOnClose}
@@ -69,7 +69,7 @@ export default function MenuDrawer({
                     text={item.text}
                   />
                 ))}
-              </ul>
+              </ul> */}
               {ctaButton ? (
                 <Button className="mt-[1.875rem] w-fit" variant="outlined">
                   {ctaButton}

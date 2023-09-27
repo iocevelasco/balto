@@ -1,6 +1,8 @@
 {
   "black": "#111111",
-  "green-primary": "#8dba09",
+  "primary": "#f28925",
+  "dark-primary": "#dd711f",
+  "secundary": "#5aa8b1",
   "green-darker": "#0c6808",
   "green-light": "#c0ff76",
   "gray-light": "#b4b4b4",

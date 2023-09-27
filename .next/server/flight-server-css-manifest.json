@@ -1,0 +1,14 @@
+{
+  "cssImports": {
+    "/Users/iocevelasco/Documents/GitHub/patitas/src/app/layout.tsx": [
+      "/Users/iocevelasco/Documents/GitHub/patitas/node_modules/next/font/google/target.css?{\"path\":\"src/utils/functions/getRalewayFont.ts\",\"import\":\"Raleway\",\"arguments\":[{\"subsets\":[\"latin\"],\"display\":\"swap\",\"variable\":\"--font-raleway\"}],\"variableName\":\"getRalewayFont\"}",
+      "/Users/iocevelasco/Documents/GitHub/patitas/src/app/globals.css"
+    ]
+  },
+  "cssModules": {
+    "/Users/iocevelasco/Documents/GitHub/patitas/src/app/page": [
+      "/Users/iocevelasco/Documents/GitHub/patitas/node_modules/next/font/google/target.css?{\"path\":\"src/utils/functions/getRalewayFont.ts\",\"import\":\"Raleway\",\"arguments\":[{\"subsets\":[\"latin\"],\"display\":\"swap\",\"variable\":\"--font-raleway\"}],\"variableName\":\"getRalewayFont\"}",
+      "/Users/iocevelasco/Documents/GitHub/patitas/src/app/globals.css"
+    ]
+  }
+}
