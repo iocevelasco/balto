@@ -66,8 +66,7 @@ const tailwindConfig = {
         ...generateWithCssVariables(colors),
       },
       backgroundImage: {
-        'overlay-gradient-dark':
-          'linear-gradient(180deg, #D9D9D900 0%, #090a0ac7 60%)',
+        'overlay-gradient-dark': 'linear-gradient(180deg, #D9D9D900 0%, #090a0ac7 60%)',
       },
     },
   },

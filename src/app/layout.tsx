@@ -7,7 +7,7 @@ import getRalewayFont from '@utils/functions/getRalewayFont'
 import './globals.css'
 import { Metadata } from 'next'
 import { Grid } from '@mui/material'
-
+import { MainLayout } from '@layouts/MainLayout/MainLayout'
 const raleway = getRalewayFont
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -33,7 +33,9 @@ export default async function RootLayout({
           <ThemeRegistry>
             <Grid>
               <Navbar />
-              {children}
+                <MainLayout>
+                {children}
+                </MainLayout>
               <Footer />
             </Grid>
           </ThemeRegistry>

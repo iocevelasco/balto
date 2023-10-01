@@ -5,9 +5,9 @@ import { PetsList } from '@components/PetsList'
 
 export default function HomePage() {
   return (
-    <Grid>
-      <PetsList/>
+    <>
       <AddPetForm/>
-    </Grid>
+      <PetsList/>
+    </>
   )
 }

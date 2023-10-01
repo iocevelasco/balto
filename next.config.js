@@ -22,11 +22,9 @@ const nextConfig = {
       },
     ],
   },
-  webpack (config) {
+  webpack(config) {
     // Grab the existing rule that handles SVG imports
-    const fileLoaderRule = config.module.rules.find((rule) =>
-      rule.test?.test?.('.svg'),
-    )
+    const fileLoaderRule = config.module.rules.find((rule) => rule.test?.test?.('.svg'))
     config.module.rules.push(
       // Reapply the existing rule, but only for svg imports ending in ?url
       {
@@ -38,7 +36,7 @@ const nextConfig = {
       {
         test: /\.svg$/,
         use: ['@svgr/webpack', 'url-loader'],
-      },
+      }
     )
 
     // Modify the file loader rule to ignore *.svg, since we have it handled now.
@@ -46,26 +44,11 @@ const nextConfig = {
 
     config.resolve.alias['@'] = path.join(__dirname, './src')
     config.resolve.alias['@/*'] = path.join(__dirname, './src/*')
-    config.resolve.alias['@/components'] = path.join(
-      __dirname,
-      './src/components',
-    )
-    config.resolve.alias['@/components/*'] = path.join(
-      __dirname,
-      './src/components/*',
-    )
-    config.resolve.alias['@/utils'] = path.join(
-      __dirname,
-      './src/app/utils',
-    )
-    config.resolve.alias['@/utils/*'] = path.join(
-      __dirname,
-      './src/utils/*',
-    )
-    config.resolve.alias['@/services/*'] = path.join(
-      __dirname,
-      './src/app/services/*',
-    )
+    config.resolve.alias['@/components'] = path.join(__dirname, './src/components')
+    config.resolve.alias['@/components/*'] = path.join(__dirname, './src/components/*')
+    config.resolve.alias['@/utils'] = path.join(__dirname, './src/app/utils')
+    config.resolve.alias['@/utils/*'] = path.join(__dirname, './src/utils/*')
+    config.resolve.alias['@/services/*'] = path.join(__dirname, './src/app/services/*')
 
     return config
   },

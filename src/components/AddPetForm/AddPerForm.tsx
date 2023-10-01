@@ -40,7 +40,7 @@ export const AddPetForm = () => {
     <Container maxWidth="sm">
       <form onSubmit={formik.handleSubmit}>
         <Typography variant="h4" gutterBottom>
-          Form
+          Agrega la informacion de tu mascota
         </Typography>
         <Grid container spacing={2}>
           <Grid item xs={12}>

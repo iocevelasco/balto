@@ -1,0 +1,14 @@
+# Ignore artifacts:
+build
+coverage
+node_modules
+.vscode
+public
+dist
+src/react-app-env.d.ts
+src/serviceWorker.ts
+vite.config.ts
+babel.config.js
+coverage
+.next
+dist

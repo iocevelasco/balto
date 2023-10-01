@@ -1,7 +1,7 @@
 import React from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Typography, Avatar, IconButton } from '@mui/material';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Typography, Avatar, IconButton, Box } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
-
+import { ProfileCard } from '@components/ProfileCard';
 const data = [
   {
     name: 'John Doe',
@@ -22,41 +22,14 @@ const data = [
 
 export const PetsList = () => {
   return (
-    <TableContainer component={Paper}>
+    <Box>
       <Typography variant="h4" align="center" gutterBottom>
         List
       </Typography>
-      <Table>
-        <TableHead>
-          <TableRow>
-            <TableCell>Name</TableCell>
-            <TableCell>Amount</TableCell>
-            <TableCell>Deadline</TableCell>
-            <TableCell>Photo</TableCell>
-            <TableCell>CBU or Bank Account</TableCell>
-            <TableCell>Action</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {data.map((item, index) => (
-            <TableRow key={index}>
-              <TableCell>{item.name}</TableCell>
-              <TableCell>{item.amount}</TableCell>
-              <TableCell>{item.deadline}</TableCell>
-              <TableCell>
-                <Avatar src={item.photo} alt={item.name} />
-              </TableCell>
-              <TableCell>{item.cbuOrBankAccount}</TableCell>
-              <TableCell>
-                <IconButton color="secondary" aria-label="delete">
-                  <DeleteIcon />
-                </IconButton>
-              </TableCell>
-            </TableRow>
+          {data.map((item) => (
+            <ProfileCard key={item.name} />
           ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+    </Box>
   );
 };
 
