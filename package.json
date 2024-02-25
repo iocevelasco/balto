@@ -1,0 +1,21 @@
+{
+  "name": "patitas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "packages/server/*"
+  ],
+  "engines": {
+    "node": "^18.16.0"
+  },
+  "scripts": {
+    "main": "yarn packages client dev"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "typescript-node": "^0.1.3"
+  }
+}
