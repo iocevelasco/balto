@@ -1,11 +1,9 @@
 import React from 'react';
-import { useState } from 'react'
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import './App.css'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const APP_BASE_ROUTES_PATTERNS = {
-  dashboard: "/dashboard/*",
-  form: "/form/*",
+  dashboard: "/",
+  AdoptionForm: "/formulario-adoption",
 };
 
 const Dashboard = React.lazy(() =>
@@ -24,8 +22,8 @@ const PublicApp = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/adociones" element={<AdoptionForm />} />
+        <Route path={APP_BASE_ROUTES_PATTERNS.dashboard} element={<Dashboard />} />
+        <Route path={APP_BASE_ROUTES_PATTERNS.AdoptionForm} element={<AdoptionForm />} />
       </Routes>
     </BrowserRouter>
   );
