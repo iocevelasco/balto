@@ -13,7 +13,7 @@ const UnauthenticatedApp = (props: UnauthenticatedAppProps) => {
       fallback={'...loading'}
     >
       <RouteContext.Provider value={contextValue}>
-      {props.children}
+        {props.children}
        </RouteContext.Provider>
       </React.Suspense>
   );

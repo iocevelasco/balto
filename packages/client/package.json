@@ -11,9 +11,12 @@
     "lint": "eslint src"
   },
   "dependencies": {
+    "@stitches/react": "^1.2.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.1"
+    "react-router-dom": "^6.22.1",
+    "stitches-zigzag": "^0.1.12",
+    "twin.macro": "^3.4.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.56",

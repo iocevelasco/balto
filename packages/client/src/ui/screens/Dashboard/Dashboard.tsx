@@ -1,9 +1,10 @@
 import React from 'react';
+import { Box } from '../../components/Box/Box';
 
 export default function Dashboard() {
   return (
-    <>
-    dashboard
-    </>
+    <Box background="card" paddingY="medium" paddingX="gutter">
+      dashboard
+    </Box>
   );
 }
