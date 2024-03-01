@@ -12,6 +12,8 @@ export default defineConfig({
     alias: {
       "~components": path.resolve(__dirname, "./src/ui/components"),
       "~screens": path.resolve(__dirname, "./src/ui/screens"),
+      "~config": path.resolve(__dirname, "./src/config"),
+      "~utils": path.resolve(__dirname, "./src/utils"),
     },
   },
   define: {

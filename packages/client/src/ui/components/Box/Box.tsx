@@ -1,5 +1,5 @@
 import tw from "twin.macro";
-import { styled } from "../../../config/stitches";
+import { styled } from "~config/stitches";
 
 const Box = styled("div", {
   compoundVariants: [

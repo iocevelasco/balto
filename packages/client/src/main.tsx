@@ -1,10 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { Config } from "./config";
 import { App } from './App.tsx'
 import './index.css'
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+void main();
+
+async function main() {
+  ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
+    <Config>
+        <App />
+      </Config>
   </React.StrictMode>,
-)
+);
+}

@@ -11,6 +11,7 @@
     "lint": "eslint src"
   },
   "dependencies": {
+    "@fontsource/source-sans-pro": "^5.0.8",
     "@stitches/react": "^1.2.8",
     "@stitches/tailwind": "^9.0.0-alpha.8",
     "@vitejs/plugin-react": "^4.2.1",
@@ -24,6 +25,11 @@
   "devDependencies": {
     "@mdx-js/rollup": "^3.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "@tailwindcss/typography": "^0.5.10",
     "@types/node": "^20.11.24",
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
