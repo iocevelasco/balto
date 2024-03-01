@@ -23,7 +23,8 @@
     "paths": {
       "~/test/*": ["test/*"],
       "~/.storybook/*": [".storybook/*"],
-      "~/*": ["src/*"],
+      "~components/*": ["src/ui/components/*"],
+      "~screens/*": ["src/ui/screens/*"],
     }
   },
   "include": ["src"],
