@@ -3,7 +3,7 @@ import { Box } from '~components/Box';
 
 export default function Dashboard() {
   return (
-    <Box >
+    <Box background='card'>
       dashboard
     </Box>
   );
