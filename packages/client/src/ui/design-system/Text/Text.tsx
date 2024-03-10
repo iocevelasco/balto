@@ -1,10 +1,10 @@
-import tw from "twin.macro";
-import { styled } from "src/config/stitches";
+import tw from 'twin.macro'
+import { styled } from 'src/config/stitches'
 
-const Text = styled("span", {
+const Text = styled('span', {
   defaultVariants: {
-    size: "standard",
-    weight: "regular",
+    size: 'standard',
+    weight: 'regular',
   },
 
   variants: {
@@ -26,7 +26,7 @@ const Text = styled("span", {
     },
     size: {
       inherit: {
-        fontSize: "inherit",
+        fontSize: 'inherit',
       },
       large: tw`text-lg`,
       small: tw`text-sm`,
@@ -35,12 +35,12 @@ const Text = styled("span", {
       xsmall: tw`text-xs`,
       xxlarge: tw`text-2xl`,
       xxsmall: {
-        fontSize: "10px",
-        lineHeight: "0.5rem",
+        fontSize: '10px',
+        lineHeight: '0.5rem',
       },
       xxxsmall: {
-        fontSize: "8px",
-        lineHeight: "0.5rem",
+        fontSize: '8px',
+        lineHeight: '0.5rem',
       },
     },
     tone: {
@@ -67,9 +67,9 @@ const Text = styled("span", {
       strong: tw`font-bold`,
     },
   },
-});
+})
 
-type TextProps = React.ComponentProps<typeof Text>;
+type TextProps = React.ComponentProps<typeof Text>
 
-export type { TextProps };
-export { Text };
+export type { TextProps }
+export { Text }

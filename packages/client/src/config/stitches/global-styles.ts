@@ -1,7 +1,7 @@
-import "@fontsource/source-sans-pro";
-import { forms } from "./forms";
-import { global } from "./index";
-import { preflight } from "./preflight";
+import '@fontsource/source-sans-pro'
+import { forms } from './forms'
+import { global } from './index'
+import { preflight } from './preflight'
 
 const globalValues = {
   ...preflight,
@@ -11,19 +11,19 @@ const globalValues = {
   body: {
     // @ts-expect-error we can't spread parts of the CSS type
     ...preflight.body,
-    "*:focus": {
+    '*:focus': {
       /* disable outline everywhere */
-      outline: "none !important",
+      outline: 'none !important',
     },
     // To disable the quick blinking effect when a link has been hit on iOS
     a: {
-      "-webkit-tap-highlight-color": "transparent",
+      '-webkit-tap-highlight-color': 'transparent',
     },
-    backgroundColor: "$gray50",
+    backgroundColor: '$gray50',
   },
-};
+}
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-argument
-const globalStyles = global(globalValues as any);
+const globalStyles = global(globalValues as any)
 
-export { globalStyles };
+export { globalStyles }
