@@ -17,10 +17,7 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "~components/*": ["src/ui/components/*"],
-      "~screens/*": ["src/ui/screens/*"],
-      "~config/*": ["src/config/*"],
-      "~utils/*": ["src/utils/*"],
+      "src/*": ["src/*"],
     }
   },
   "include": ["src"],

@@ -1,5 +1,5 @@
 import tw from "twin.macro";
-import { styled } from "~config/stitches";
+import { styled } from "src/config/stitches";
 
 const Box = styled("div", {
   compoundVariants: [
@@ -29,7 +29,7 @@ const Box = styled("div", {
     },
     background: {
       body: tw`bg-transparent`,
-      brand: tw`bg-emerald-500`,
+      brand: tw`bg-purple-500`,
       brandAccent: tw`bg-emerald-700`,
       brandAccentActive: tw`bg-emerald-800`,
       brandAccentHover: tw`bg-emerald-600`,
@@ -207,7 +207,214 @@ const Box = styled("div", {
       xsmall: {
         marginBottom: "$xsmall",
       },
-    }
+    },
+    padding: {
+      gutter: {
+        padding: "$gutter",
+      },
+      large: {
+        padding: "$large",
+      },
+      medium: {
+        padding: "$medium",
+      },
+      small: {
+        padding: "$small",
+      },
+      xlarge: {
+        padding: "$xlarge",
+      },
+      xsmall: {
+        padding: "$xsmall",
+      },
+      xxlarge: {
+        padding: "$xxlarge",
+      },
+      xxsmall: {
+        padding: "$xxsmall",
+      },
+    },
+    paddingBottom: {
+      gutter: {
+        paddingBottom: "$gutter",
+      },
+      large: {
+        paddingBottom: "$large",
+      },
+      medium: {
+        paddingBottom: "$medium",
+      },
+      small: {
+        paddingBottom: "$small",
+      },
+      xlarge: {
+        paddingBottom: "$xlarge",
+      },
+      xsmall: {
+        paddingBottom: "$xsmall",
+      },
+      xxlarge: {
+        paddingBottom: "$xxlarge",
+      },
+      xxsmall: {
+        paddingBottom: "$xxsmall",
+      },
+    },
+    paddingLeft: {
+      gutter: {
+        paddingLeft: "$gutter",
+      },
+      large: {
+        paddingLeft: "$large",
+      },
+      medium: {
+        paddingLeft: "$medium",
+      },
+      small: {
+        paddingLeft: "$small",
+      },
+      xlarge: {
+        paddingLeft: "$xlarge",
+      },
+      xsmall: {
+        paddingLeft: "$xsmall",
+      },
+      xxlarge: {
+        paddingLeft: "$xxlarge",
+      },
+      xxsmall: {
+        paddingLeft: "$xxsmall",
+      },
+    },
+    paddingRight: {
+      gutter: {
+        paddingRight: "$gutter",
+      },
+      large: {
+        paddingRight: "$large",
+      },
+      medium: {
+        paddingRight: "$medium",
+      },
+      small: {
+        paddingRight: "$small",
+      },
+      xlarge: {
+        paddingRight: "$xlarge",
+      },
+      xsmall: {
+        paddingRight: "$xsmall",
+      },
+      xxlarge: {
+        paddingRight: "$xxlarge",
+      },
+      xxsmall: {
+        paddingRight: "$xxsmall",
+      },
+    },
+    paddingTop: {
+      gutter: {
+        paddingTop: "$gutter",
+      },
+      large: {
+        paddingTop: "$large",
+      },
+      medium: {
+        paddingTop: "$medium",
+      },
+      safe: {
+        paddingTop: "env(safe-area-inset-top)",
+      },
+      small: {
+        paddingTop: "$small",
+      },
+      xlarge: {
+        paddingTop: "$xlarge",
+      },
+      xsmall: {
+        paddingTop: "$xsmall",
+      },
+      xxlarge: {
+        paddingTop: "$xxlarge",
+      },
+      xxsmall: {
+        paddingTop: "$xxsmall",
+      },
+    },
+    paddingX: {
+      gutter: {
+        paddingLeft: "$gutter",
+        paddingRight: "$gutter",
+      },
+      large: {
+        paddingLeft: "$large",
+        paddingRight: "$large",
+      },
+      medium: {
+        paddingLeft: "$medium",
+        paddingRight: "$medium",
+      },
+      small: {
+        paddingLeft: "$small",
+        paddingRight: "$small",
+      },
+      xlarge: {
+        paddingLeft: "$xlarge",
+        paddingRight: "$xlarge",
+      },
+      xsmall: {
+        paddingLeft: "$xsmall",
+        paddingRight: "$xsmall",
+      },
+      xxlarge: {
+        paddingLeft: "$xxlarge",
+        paddingRight: "$xxlarge",
+      },
+      xxsmall: {
+        paddingLeft: "$xxsmall",
+        paddingRight: "$xxsmall",
+      },
+    },
+    paddingY: {
+      gutter: {
+        paddingBottom: "$gutter",
+        paddingTop: "$gutter",
+      },
+      large: {
+        paddingBottom: "$large",
+        paddingTop: "$large",
+      },
+      medium: {
+        paddingBottom: "$medium",
+        paddingTop: "$medium",
+      },
+      small: {
+        paddingBottom: "$small",
+        paddingTop: "$small",
+      },
+      xlarge: {
+        paddingBottom: "$xlarge",
+        paddingTop: "$xlarge",
+      },
+      xsmall: {
+        paddingBottom: "$xsmall",
+        paddingTop: "$xsmall",
+      },
+      xxlarge: {
+        paddingBottom: "$xxlarge",
+        paddingTop: "$xxlarge",
+      },
+      xxsmall: {
+        paddingBottom: "$xxsmall",
+        paddingTop: "$xxsmall",
+      },
+    },
+    position: {
+      absolute: tw`absolute`,
+      fixed: tw`fixed`,
+      relative: tw`relative`,
+      sticky: tw`sticky`,
+    },
   },
 })
 

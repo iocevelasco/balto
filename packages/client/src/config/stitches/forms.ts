@@ -6,9 +6,9 @@ import type { CSS } from ".";
 const [baseFontSize, { lineHeight: baseLineHeight }] = (
   defaultTheme as TailwindConfigDefault["theme"]
 ).fontSize.base;
+
 const { borderRadius, borderWidth, colors, outline, spacing } =
   defaultTheme as TailwindConfigDefault["theme"];
-
 /**
  * This is a port of @tailwindcss/forms plugin (https://github.com/tailwindlabs/tailwindcss-forms)
  * Once twin.macro will add a "stitches" preset we will be able to delete this code and add the official plugin
@@ -35,9 +35,11 @@ const forms: CSS = {
     appearance: "none",
     backgroundColor: "#fff",
     backgroundOrigin: "border-box",
-    borderColor: colors.gray[500],
+    borderColor: ({ theme }: {theme: TailwindConfigDefault["theme"]}) => ({
+      gray: theme('colors.gray.600')
+    }),
     borderWidth: borderWidth["DEFAULT"],
-    color: colors.blue[600],
+   // color:  colors.gray[500],
     colorAdjust: "exact",
     display: "inline-block",
     flexShrink: "0",
@@ -65,15 +67,15 @@ const forms: CSS = {
       borderColor: "transparent",
     },
   "[type='checkbox']:focus, [type='radio']:focus": {
-    "--tw-ring-color": colors.blue[600],
+    //"--tw-ring-color": colors.blue[600],
     "--tw-ring-inset": "var(--tw-empty,/*!*/ /*!*/)",
     "--tw-ring-offset-color": "#fff",
     "--tw-ring-offset-shadow": `var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)`,
     "--tw-ring-offset-width": "2px",
     "--tw-ring-shadow": `var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color)`,
     boxShadow: `var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)`,
-    outline: outline.none[0],
-    outlineOffset: outline.none[1],
+    //outline: outline.none[0],
+    //outlineOffset: outline.none[1],
   },
   "[type='checkbox']:indeterminate": {
     backgroundColor: `currentColor`,
@@ -114,20 +116,20 @@ const forms: CSS = {
   "[type='text'],[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select":
     {
       "&:focus": {
-        "--tw-ring-color": colors.blue[600],
+        //"--tw-ring-color": colors.blue[600],
         "--tw-ring-inset": "var(--tw-empty,/*!*/ /*!*/)",
         "--tw-ring-offset-color": "#fff",
         "--tw-ring-offset-shadow": `var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)`,
         "--tw-ring-offset-width": "0px",
         "--tw-ring-shadow": `var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color)`,
-        borderColor: colors.blue[600],
+        //borderColor: colors.blue[600],
         boxShadow: `var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)`,
-        outline: outline.none[0],
-        outlineOffset: outline.none[1],
+        //outline: outline.none[0],
+        //outlineOffset: outline.none[1],
       },
       appearance: "none",
       backgroundColor: "#fff",
-      borderColor: colors.gray[500],
+      //borderColor: colors.gray[600],
       borderRadius: borderRadius.none,
       borderWidth: borderWidth["DEFAULT"],
       fontSize: baseFontSize,
@@ -138,12 +140,12 @@ const forms: CSS = {
       paddingTop: spacing[2],
     },
   "input::placeholder, textarea::placeholder": {
-    color: colors.gray[500],
+    //color: colors.gray[600],
     opacity: "1",
   },
   select: {
     backgroundImage: `url("${svgToDataUri(
-      `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"><path stroke="${colors.gray[500]}" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 8l4 4 4-4"/></svg>`
+      `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 8l4 4 4-4"/></svg>`
     )}")`,
     backgroundPosition: `right ${spacing[2]} center`,
     backgroundRepeat: `no-repeat`,

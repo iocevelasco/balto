@@ -13,18 +13,19 @@ const slate = {
   "900": "#0f172a",
 };
 
-const sky = {
-  "100": "#e0f2fe",
-  "200": "#bae6fd",
-  "300": "#7dd3fc",
-  "400": "#38bdf8",
-  "50": "#f0f9ff",
-  "500": "#0ea5e9",
-  "600": "#0284c7",
-  "700": "#0369a1",
-  "800": "#075985",
-  "900": "#0c4a6e",
-};
+const purple = {
+  '50': '#fff4fe',
+  '100': '#fee9fc',
+  '200': '#fcd2f9',
+  '300': '#f9aef0',
+  '400': '#f57de5',
+  '500': '#ea53d6',
+  '600': '#cd2cb5',
+  '700': '#aa2192',
+  '800': '#8b1d76',
+  '900': '#721d61',
+  '950': '#4b073c',
+}
 
 const colors = {
   ...tailwind.theme.colors,
@@ -36,7 +37,7 @@ const colors = {
   ...aliasPaletteTokens("violet", "promote" as const),
   // These palettes are Tailwind V3-only and we are still on V2
   ...paletteToTokens("slate" as const, slate),
-  ...paletteToTokens("sky" as const, sky),
+  ...paletteToTokens("purple" as const, purple),
   transparent: "transparent",
 };
 

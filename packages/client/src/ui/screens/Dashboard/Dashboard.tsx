@@ -1,18 +1,25 @@
 import React from 'react';
-import { Box } from '~components/Box';
-import { Text } from '~components/Text';
+import { Box } from 'src/ui/design-system/Box';
+import { Text } from 'src/ui/design-system/Text';
+import { UnauthenticatedApp } from 'src/ui/layouts/UnauthenticatedApp';
 
-export default function Dashboard() {
+function Dashboard() {
   return (
-    <Box display='flex' justifyContent='center'>
-      <Text
-        truncate="noEllipsis"
-        tone="black"
-        weight="medium"
-        size="xlarge"
-      >
-        dashboard
-      </Text>
-    </Box>
+    <UnauthenticatedApp>
+      <Box display="flex" flexGrow="1" >
+        <Text
+          truncate="noEllipsis"
+          tone="black"
+          weight="medium"
+          size="xlarge"
+          >
+          dashboard
+        </Text>
+      </Box>
+    </UnauthenticatedApp>
   );
+}
+
+export {
+  Dashboard
 }
