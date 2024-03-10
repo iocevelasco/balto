@@ -9,7 +9,9 @@ const Breakpoints = {
 };
 
 export default {
-  content: [],
+  content: [
+    './src/**/*.{js,ts,jsx,tsx,html}'
+  ],
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),

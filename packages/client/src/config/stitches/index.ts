@@ -1,7 +1,7 @@
 import type * as Stitches from "@stitches/react";
 import { createStitches } from "@stitches/react";
+import { Breakpoints } from "src/utils/constants/tokens";
 import { tailwind } from "stitches-zigzag";
-import { Breakpoints } from "~utils/constants/tokens";
 import { colors } from "./colors";
 
 const config = createStitches({

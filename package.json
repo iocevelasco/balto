@@ -12,7 +12,8 @@
     "node": "^18.16.0"
   },
   "scripts": {
-    "main": "yarn packages client dev"
+    "main": "yarn packages client dev",
+    "dev:client": "yarn workspace client dev"
   },
   "devDependencies": {
     "typescript": "^5.3.3",

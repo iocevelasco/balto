@@ -10,10 +10,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "~components": path.resolve(__dirname, "./src/ui/components"),
-      "~screens": path.resolve(__dirname, "./src/ui/screens"),
-      "~config": path.resolve(__dirname, "./src/config"),
-      "~utils": path.resolve(__dirname, "./src/utils"),
+      "src": path.resolve(__dirname, "./src"),
     },
   },
   define: {

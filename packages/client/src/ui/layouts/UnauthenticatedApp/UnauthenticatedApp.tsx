@@ -1,5 +1,8 @@
 import React from 'react';
 import { UNSAFE_RouteContext as RouteContext } from "react-router";
+import { Footer } from 'src/ui/components/Footer';
+import { Header } from 'src/ui/components/Header';
+import { Box } from 'src/ui/design-system/Box';
 
 interface UnauthenticatedAppProps { 
   children: React.ReactNode | React.ReactNode[];
@@ -13,9 +16,13 @@ const UnauthenticatedApp = (props: UnauthenticatedAppProps) => {
       fallback={'...loading'}
     >
       <RouteContext.Provider value={contextValue}>
+        <Box display='flex' flexDirection='column' height="screen">
+        <Header />
         {props.children}
-       </RouteContext.Provider>
-      </React.Suspense>
+        <Footer />
+        </Box>
+      </RouteContext.Provider>
+    </React.Suspense>
   );
 }
 
