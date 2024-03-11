@@ -1,4 +1,4 @@
-import { ApolloClient, InMemoryCache } from '@apollo/client';
+import { ApolloClient, InMemoryCache } from '@apollo/client'
 import gql from 'graphql-tag'
 
 const client = new ApolloClient({
@@ -19,6 +19,6 @@ const query = gql`
 
 client
   .query({query})
-  .then((result) => console.log(result));
+  .then((result) => console.log(result))
 
 export { client }
