@@ -7,6 +7,6 @@ import (
 )
 
 type Database interface {
-	Todos(context.Context) ([]*types.Todo, error)
+	GetTodos(context.Context) ([]*types.Todo, error)
 	CreateTodo(context.Context, *types.Todo) (id int64, err error)
 }

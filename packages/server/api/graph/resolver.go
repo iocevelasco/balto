@@ -21,9 +21,8 @@ func NewResolver(service *services.TodosService) *Resolver {
 
 func (r *Resolver) Create(ctx context.Context, input *model.NewTodo) (*model.Todo, error) {
 	todo := &types.Todo{
-		Text:   input.Text,
-		Done:   false,
-		UserID: input.UserID,
+		Text: input.Text,
+		Done: false,
 	}
 
 	id, err := r.todosService.Create(ctx, todo)
@@ -33,9 +32,26 @@ func (r *Resolver) Create(ctx context.Context, input *model.NewTodo) (*model.Tod
 	}
 
 	return &model.Todo{
-		ID:     id,
-		Text:   todo.Text,
-		Done:   todo.Done,
-		UserID: todo.UserID,
+		ID:   id,
+		Text: todo.Text,
+		Done: todo.Done,
 	}, nil
+}
+
+func (r *Resolver) GetTodos(ctx context.Context) ([]*model.Todo, error) {
+	todos, err := r.todosService.GetTodos(ctx)
+	if err != nil {
+		log.Printf("error getting todos: %v", err)
+		return nil, err
+	}
+
+	var response []*model.Todo
+	for _, todo := range todos {
+		response = append(response, &model.Todo{
+			ID:   todo.ID,
+			Text: todo.Text,
+			Done: todo.Done,
+		})
+	}
+	return response, nil
 }

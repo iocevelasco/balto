@@ -18,3 +18,7 @@ func NewTodosService(db database.Database) *TodosService {
 func (s *TodosService) Create(ctx context.Context, todo *types.Todo) (int64, error) {
 	return s.db.CreateTodo(ctx, todo)
 }
+
+func (s *TodosService) GetTodos(ctx context.Context) ([]*types.Todo, error) {
+	return s.db.GetTodos(ctx)
+}
