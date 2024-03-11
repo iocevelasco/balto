@@ -1,12 +1,12 @@
-import tw from "twin.macro";
-import { styled } from "src/config/stitches";
+import tw from 'twin.macro'
+import { styled } from 'src/config/stitches'
 
-export const Divider = styled("div", {
+export const Divider = styled('div', {
   ...tw`outline-none`,
 
   defaultVariants: {
     vertical: false,
-    weight: "regular",
+    weight: 'regular',
   },
 
   variants: {
@@ -19,4 +19,4 @@ export const Divider = styled("div", {
       strong: tw`bg-neutral-500`,
     },
   },
-});
+})

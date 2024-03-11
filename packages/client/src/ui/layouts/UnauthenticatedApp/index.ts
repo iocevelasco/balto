@@ -1,1 +1,1 @@
-export { UnauthenticatedApp } from './UnauthenticatedApp';
+export { UnauthenticatedApp } from './UnauthenticatedApp'

@@ -1,20 +1,20 @@
-import tw from "twin.macro";
-import { styled } from "src/config/stitches";
+import tw from 'twin.macro'
+import { styled } from 'src/config/stitches'
 
-const Box = styled("div", {
+const Box = styled('div', {
   compoundVariants: [
     {
-      boxShadow: "xsmall",
+      boxShadow: 'xsmall',
       css: tw`hover:shadow`,
       hoverEffect: true,
     },
     {
-      boxShadow: "small",
+      boxShadow: 'small',
       css: tw`hover:shadow-md`,
       hoverEffect: true,
     },
     {
-      boxShadow: "medium",
+      boxShadow: 'medium',
       css: tw`hover:shadow-xl`,
       hoverEffect: true,
     },
@@ -36,17 +36,17 @@ const Box = styled("div", {
       card: tw`bg-white`,
       caution: tw`bg-cyan-400`,
       image: {
-        "&": {
-          position: "relative",
+        '&': {
+          position: 'relative',
           zIndex: 0,
         },
-        "& > :last-child": {
+        '& > :last-child': {
           bottom: 0,
           left: 0,
-          position: "absolute",
+          position: 'absolute',
           right: 0,
           top: 0,
-          width: "100%",
+          width: '100%',
           zIndex: -1,
         },
       },
@@ -119,25 +119,25 @@ const Box = styled("div", {
     },
     gap: {
       gutter: {
-        gap: "$gutter",
+        gap: '$gutter',
       },
       large: {
-        gap: "$large",
+        gap: '$large',
       },
       medium: {
-        gap: "$medium",
+        gap: '$medium',
       },
       small: {
-        gap: "$small",
+        gap: '$small',
       },
       xlarge: {
-        gap: "$xlarge",
+        gap: '$xlarge',
       },
       xsmall: {
-        gap: "$xsmall",
+        gap: '$xsmall',
       },
       xxsmall: {
-        gap: "$xxsmall",
+        gap: '$xxsmall',
       },
     },
     height: {
@@ -147,7 +147,7 @@ const Box = styled("div", {
     },
     hoverEffect: {
       true: {
-        "&:hover": { transform: "translateY(-2%)", ...tw`` },
+        '&:hover': { transform: 'translateY(-2%)', ...tw`` },
         ...tw`transition-all`,
       },
     },
@@ -164,249 +164,249 @@ const Box = styled("div", {
     },
     margin: {
       gutter: {
-        margin: "$gutter",
+        margin: '$gutter',
       },
       large: {
-        margin: "$large",
+        margin: '$large',
       },
       medium: {
-        margin: "$medium",
+        margin: '$medium',
       },
       small: {
-        margin: "$small",
+        margin: '$small',
       },
       xlarge: {
-        margin: "$xlarge",
+        margin: '$xlarge',
       },
       xsmall: {
-        margin: "$xsmall",
+        margin: '$xsmall',
       },
       xxlarge: {
-        margin: "$xxlarge",
+        margin: '$xxlarge',
       },
       xxsmall: {
-        margin: "$xxsmall",
+        margin: '$xxsmall',
       },
     },
     marginBottom: {
       gutter: {
-        marginBottom: "$gutter",
+        marginBottom: '$gutter',
       },
       large: {
-        marginBottom: "$large",
+        marginBottom: '$large',
       },
       medium: {
-        marginBottom: "$medium",
+        marginBottom: '$medium',
       },
       small: {
-        marginBottom: "$small",
+        marginBottom: '$small',
       },
       xlarge: {
-        marginBottom: "$xlarge",
+        marginBottom: '$xlarge',
       },
       xsmall: {
-        marginBottom: "$xsmall",
+        marginBottom: '$xsmall',
       },
     },
     padding: {
       gutter: {
-        padding: "$gutter",
+        padding: '$gutter',
       },
       large: {
-        padding: "$large",
+        padding: '$large',
       },
       medium: {
-        padding: "$medium",
+        padding: '$medium',
       },
       small: {
-        padding: "$small",
+        padding: '$small',
       },
       xlarge: {
-        padding: "$xlarge",
+        padding: '$xlarge',
       },
       xsmall: {
-        padding: "$xsmall",
+        padding: '$xsmall',
       },
       xxlarge: {
-        padding: "$xxlarge",
+        padding: '$xxlarge',
       },
       xxsmall: {
-        padding: "$xxsmall",
+        padding: '$xxsmall',
       },
     },
     paddingBottom: {
       gutter: {
-        paddingBottom: "$gutter",
+        paddingBottom: '$gutter',
       },
       large: {
-        paddingBottom: "$large",
+        paddingBottom: '$large',
       },
       medium: {
-        paddingBottom: "$medium",
+        paddingBottom: '$medium',
       },
       small: {
-        paddingBottom: "$small",
+        paddingBottom: '$small',
       },
       xlarge: {
-        paddingBottom: "$xlarge",
+        paddingBottom: '$xlarge',
       },
       xsmall: {
-        paddingBottom: "$xsmall",
+        paddingBottom: '$xsmall',
       },
       xxlarge: {
-        paddingBottom: "$xxlarge",
+        paddingBottom: '$xxlarge',
       },
       xxsmall: {
-        paddingBottom: "$xxsmall",
+        paddingBottom: '$xxsmall',
       },
     },
     paddingLeft: {
       gutter: {
-        paddingLeft: "$gutter",
+        paddingLeft: '$gutter',
       },
       large: {
-        paddingLeft: "$large",
+        paddingLeft: '$large',
       },
       medium: {
-        paddingLeft: "$medium",
+        paddingLeft: '$medium',
       },
       small: {
-        paddingLeft: "$small",
+        paddingLeft: '$small',
       },
       xlarge: {
-        paddingLeft: "$xlarge",
+        paddingLeft: '$xlarge',
       },
       xsmall: {
-        paddingLeft: "$xsmall",
+        paddingLeft: '$xsmall',
       },
       xxlarge: {
-        paddingLeft: "$xxlarge",
+        paddingLeft: '$xxlarge',
       },
       xxsmall: {
-        paddingLeft: "$xxsmall",
+        paddingLeft: '$xxsmall',
       },
     },
     paddingRight: {
       gutter: {
-        paddingRight: "$gutter",
+        paddingRight: '$gutter',
       },
       large: {
-        paddingRight: "$large",
+        paddingRight: '$large',
       },
       medium: {
-        paddingRight: "$medium",
+        paddingRight: '$medium',
       },
       small: {
-        paddingRight: "$small",
+        paddingRight: '$small',
       },
       xlarge: {
-        paddingRight: "$xlarge",
+        paddingRight: '$xlarge',
       },
       xsmall: {
-        paddingRight: "$xsmall",
+        paddingRight: '$xsmall',
       },
       xxlarge: {
-        paddingRight: "$xxlarge",
+        paddingRight: '$xxlarge',
       },
       xxsmall: {
-        paddingRight: "$xxsmall",
+        paddingRight: '$xxsmall',
       },
     },
     paddingTop: {
       gutter: {
-        paddingTop: "$gutter",
+        paddingTop: '$gutter',
       },
       large: {
-        paddingTop: "$large",
+        paddingTop: '$large',
       },
       medium: {
-        paddingTop: "$medium",
+        paddingTop: '$medium',
       },
       safe: {
-        paddingTop: "env(safe-area-inset-top)",
+        paddingTop: 'env(safe-area-inset-top)',
       },
       small: {
-        paddingTop: "$small",
+        paddingTop: '$small',
       },
       xlarge: {
-        paddingTop: "$xlarge",
+        paddingTop: '$xlarge',
       },
       xsmall: {
-        paddingTop: "$xsmall",
+        paddingTop: '$xsmall',
       },
       xxlarge: {
-        paddingTop: "$xxlarge",
+        paddingTop: '$xxlarge',
       },
       xxsmall: {
-        paddingTop: "$xxsmall",
+        paddingTop: '$xxsmall',
       },
     },
     paddingX: {
       gutter: {
-        paddingLeft: "$gutter",
-        paddingRight: "$gutter",
+        paddingLeft: '$gutter',
+        paddingRight: '$gutter',
       },
       large: {
-        paddingLeft: "$large",
-        paddingRight: "$large",
+        paddingLeft: '$large',
+        paddingRight: '$large',
       },
       medium: {
-        paddingLeft: "$medium",
-        paddingRight: "$medium",
+        paddingLeft: '$medium',
+        paddingRight: '$medium',
       },
       small: {
-        paddingLeft: "$small",
-        paddingRight: "$small",
+        paddingLeft: '$small',
+        paddingRight: '$small',
       },
       xlarge: {
-        paddingLeft: "$xlarge",
-        paddingRight: "$xlarge",
+        paddingLeft: '$xlarge',
+        paddingRight: '$xlarge',
       },
       xsmall: {
-        paddingLeft: "$xsmall",
-        paddingRight: "$xsmall",
+        paddingLeft: '$xsmall',
+        paddingRight: '$xsmall',
       },
       xxlarge: {
-        paddingLeft: "$xxlarge",
-        paddingRight: "$xxlarge",
+        paddingLeft: '$xxlarge',
+        paddingRight: '$xxlarge',
       },
       xxsmall: {
-        paddingLeft: "$xxsmall",
-        paddingRight: "$xxsmall",
+        paddingLeft: '$xxsmall',
+        paddingRight: '$xxsmall',
       },
     },
     paddingY: {
       gutter: {
-        paddingBottom: "$gutter",
-        paddingTop: "$gutter",
+        paddingBottom: '$gutter',
+        paddingTop: '$gutter',
       },
       large: {
-        paddingBottom: "$large",
-        paddingTop: "$large",
+        paddingBottom: '$large',
+        paddingTop: '$large',
       },
       medium: {
-        paddingBottom: "$medium",
-        paddingTop: "$medium",
+        paddingBottom: '$medium',
+        paddingTop: '$medium',
       },
       small: {
-        paddingBottom: "$small",
-        paddingTop: "$small",
+        paddingBottom: '$small',
+        paddingTop: '$small',
       },
       xlarge: {
-        paddingBottom: "$xlarge",
-        paddingTop: "$xlarge",
+        paddingBottom: '$xlarge',
+        paddingTop: '$xlarge',
       },
       xsmall: {
-        paddingBottom: "$xsmall",
-        paddingTop: "$xsmall",
+        paddingBottom: '$xsmall',
+        paddingTop: '$xsmall',
       },
       xxlarge: {
-        paddingBottom: "$xxlarge",
-        paddingTop: "$xxlarge",
+        paddingBottom: '$xxlarge',
+        paddingTop: '$xxlarge',
       },
       xxsmall: {
-        paddingBottom: "$xxsmall",
-        paddingTop: "$xxsmall",
+        paddingBottom: '$xxsmall',
+        paddingTop: '$xxsmall',
       },
     },
     position: {
@@ -418,7 +418,7 @@ const Box = styled("div", {
   },
 })
 
-type BoxProps = React.ComponentProps<typeof Box>;
+type BoxProps = React.ComponentProps<typeof Box>
 
-export type { BoxProps };
-export { Box };
+export type { BoxProps }
+export { Box }

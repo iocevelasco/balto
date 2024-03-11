@@ -1,52 +1,51 @@
-import svgToDataUri from "mini-svg-data-uri";
-import defaultTheme from "tailwindcss/defaultTheme";
-import type { TailwindConfigDefault } from "tailwindcss/tailwind-config-default";
-import type { CSS } from ".";
+import svgToDataUri from 'mini-svg-data-uri'
+import defaultTheme from 'tailwindcss/defaultTheme'
+import type { TailwindConfigDefault } from 'tailwindcss/tailwind-config-default'
+import type { CSS } from '.'
 
 const [baseFontSize, { lineHeight: baseLineHeight }] = (
-  defaultTheme as TailwindConfigDefault["theme"]
-).fontSize.base;
+  defaultTheme as TailwindConfigDefault['theme']
+).fontSize.base
 
-const { borderRadius, borderWidth, colors, outline, spacing } =
-  defaultTheme as TailwindConfigDefault["theme"];
+const { borderRadius, borderWidth, spacing } = defaultTheme as TailwindConfigDefault['theme']
 /**
  * This is a port of @tailwindcss/forms plugin (https://github.com/tailwindlabs/tailwindcss-forms)
  * Once twin.macro will add a "stitches" preset we will be able to delete this code and add the official plugin
  */
 const forms: CSS = {
-  "::-webkit-date-and-time-value": {
-    minHeight: "1.5em",
+  '::-webkit-date-and-time-value': {
+    minHeight: '1.5em',
   },
-  "::-webkit-datetime-edit-fields-wrapper": {
-    padding: "0",
+  '::-webkit-datetime-edit-fields-wrapper': {
+    padding: '0',
   },
-  "[multiple]": {
-    backgroundImage: "initial",
-    backgroundPosition: "initial",
-    backgroundRepeat: "unset",
-    backgroundSize: "initial",
-    colorAdjust: "unset",
+  '[multiple]': {
+    backgroundImage: 'initial',
+    backgroundPosition: 'initial',
+    backgroundRepeat: 'unset',
+    backgroundSize: 'initial',
+    colorAdjust: 'unset',
     paddingRight: spacing[3],
   },
   "[type='checkbox']": {
-    borderRadius: borderRadius["none"],
+    borderRadius: borderRadius['none'],
   },
   "[type='checkbox'], [type='radio']": {
-    appearance: "none",
-    backgroundColor: "#fff",
-    backgroundOrigin: "border-box",
-    borderColor: ({ theme }: {theme: TailwindConfigDefault["theme"]}) => ({
-      gray: theme('colors.gray.600')
+    appearance: 'none',
+    backgroundColor: '#fff',
+    backgroundOrigin: 'border-box',
+    borderColor: ({ theme }: { theme: TailwindConfigDefault['theme'] }) => ({
+      gray: theme('colors.gray.600'),
     }),
-    borderWidth: borderWidth["DEFAULT"],
-   // color:  colors.gray[500],
-    colorAdjust: "exact",
-    display: "inline-block",
-    flexShrink: "0",
+    borderWidth: borderWidth['DEFAULT'],
+    // color:  colors.gray[500],
+    colorAdjust: 'exact',
+    display: 'inline-block',
+    flexShrink: '0',
     height: spacing[4],
-    padding: "0",
-    userSelect: "none",
-    verticalAlign: "middle",
+    padding: '0',
+    userSelect: 'none',
+    verticalAlign: 'middle',
     width: spacing[4],
   },
   "[type='checkbox']:checked": {
@@ -63,16 +62,16 @@ const forms: CSS = {
   },
   "[type='checkbox']:checked:hover,[type='checkbox']:checked:focus,[type='radio']:checked:hover,[type='radio']:checked:focus":
     {
-      backgroundColor: "currentColor",
-      borderColor: "transparent",
+      backgroundColor: 'currentColor',
+      borderColor: 'transparent',
     },
   "[type='checkbox']:focus, [type='radio']:focus": {
     //"--tw-ring-color": colors.blue[600],
-    "--tw-ring-inset": "var(--tw-empty,/*!*/ /*!*/)",
-    "--tw-ring-offset-color": "#fff",
-    "--tw-ring-offset-shadow": `var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)`,
-    "--tw-ring-offset-width": "2px",
-    "--tw-ring-shadow": `var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color)`,
+    '--tw-ring-inset': 'var(--tw-empty,/*!*/ /*!*/)',
+    '--tw-ring-offset-color': '#fff',
+    '--tw-ring-offset-shadow': `var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)`,
+    '--tw-ring-offset-width': '2px',
+    '--tw-ring-shadow': `var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color)`,
     boxShadow: `var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)`,
     //outline: outline.none[0],
     //outlineOffset: outline.none[1],
@@ -87,26 +86,25 @@ const forms: CSS = {
     backgroundSize: `100% 100%`,
     borderColor: `transparent`,
   },
-  "[type='checkbox']:indeterminate:hover, [type='checkbox']:indeterminate:focus":
-    {
-      backgroundColor: "currentColor",
-      borderColor: "transparent",
-    },
+  "[type='checkbox']:indeterminate:hover, [type='checkbox']:indeterminate:focus": {
+    backgroundColor: 'currentColor',
+    borderColor: 'transparent',
+  },
   "[type='file']": {
-    background: "unset",
-    borderColor: "inherit",
-    borderRadius: "0",
-    borderWidth: "0",
-    fontSize: "unset",
-    lineHeight: "inherit",
-    padding: "0",
+    background: 'unset',
+    borderColor: 'inherit',
+    borderRadius: '0',
+    borderWidth: '0',
+    fontSize: 'unset',
+    lineHeight: 'inherit',
+    padding: '0',
   },
   "[type='file']:focus": {
     // outline: `1px solid ButtonText`,
     outline: `1px auto -webkit-focus-ring-color`,
   },
   "[type='radio']": {
-    borderRadius: "100%",
+    borderRadius: '100%',
   },
   "[type='radio']:checked": {
     backgroundImage: `url("${svgToDataUri(
@@ -115,23 +113,23 @@ const forms: CSS = {
   },
   "[type='text'],[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select":
     {
-      "&:focus": {
+      '&:focus': {
         //"--tw-ring-color": colors.blue[600],
-        "--tw-ring-inset": "var(--tw-empty,/*!*/ /*!*/)",
-        "--tw-ring-offset-color": "#fff",
-        "--tw-ring-offset-shadow": `var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)`,
-        "--tw-ring-offset-width": "0px",
-        "--tw-ring-shadow": `var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color)`,
+        '--tw-ring-inset': 'var(--tw-empty,/*!*/ /*!*/)',
+        '--tw-ring-offset-color': '#fff',
+        '--tw-ring-offset-shadow': `var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)`,
+        '--tw-ring-offset-width': '0px',
+        '--tw-ring-shadow': `var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color)`,
         //borderColor: colors.blue[600],
         boxShadow: `var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)`,
         //outline: outline.none[0],
         //outlineOffset: outline.none[1],
       },
-      appearance: "none",
-      backgroundColor: "#fff",
+      appearance: 'none',
+      backgroundColor: '#fff',
       //borderColor: colors.gray[600],
       borderRadius: borderRadius.none,
-      borderWidth: borderWidth["DEFAULT"],
+      borderWidth: borderWidth['DEFAULT'],
       fontSize: baseFontSize,
       lineHeight: baseLineHeight,
       paddingBottom: spacing[2],
@@ -139,9 +137,9 @@ const forms: CSS = {
       paddingRight: spacing[3],
       paddingTop: spacing[2],
     },
-  "input::placeholder, textarea::placeholder": {
+  'input::placeholder, textarea::placeholder': {
     //color: colors.gray[600],
-    opacity: "1",
+    opacity: '1',
   },
   select: {
     backgroundImage: `url("${svgToDataUri(
@@ -153,6 +151,6 @@ const forms: CSS = {
     colorAdjust: `exact`,
     paddingRight: spacing[10],
   },
-};
+}
 
-export { forms };
+export { forms }

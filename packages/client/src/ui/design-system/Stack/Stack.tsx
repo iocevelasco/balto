@@ -1,17 +1,17 @@
-import type * as Stitches from "@stitches/react";
-import React from "react";
-import tw from "twin.macro";
-import type { CSS } from "src/config/stitches";
-import { styled } from "src/config/stitches";
-import { Divider } from "../Divider";
+import type * as Stitches from '@stitches/react'
+import React from 'react'
+import tw from 'twin.macro'
+import type { CSS } from 'src/config/stitches'
+import { styled } from 'src/config/stitches'
+import { Divider } from '../Divider'
 
-const StackWrapper = styled("div", {
+const StackWrapper = styled('div', {
   ...tw`grid`,
 
   defaultVariants: {
-    align: "left",
-    space: "small",
-    width: "full",
+    align: 'left',
+    space: 'small',
+    width: 'full',
   },
 
   variants: {
@@ -22,29 +22,29 @@ const StackWrapper = styled("div", {
     },
     space: {
       gutter: {
-        gap: "$gutter",
+        gap: '$gutter',
       },
       large: {
-        gap: "$large",
+        gap: '$large',
       },
       medium: {
-        gap: "$medium",
+        gap: '$medium',
       },
       none: {},
       small: {
-        gap: "$small",
+        gap: '$small',
       },
       xlarge: {
-        gap: "$xlarge",
+        gap: '$xlarge',
       },
       xsmall: {
-        gap: "$xsmall",
+        gap: '$xsmall',
       },
       xxlarge: {
-        gap: "$xxlarge",
+        gap: '$xxlarge',
       },
       xxsmall: {
-        gap: "$xxsmall",
+        gap: '$xxsmall',
       },
     },
     width: {
@@ -52,9 +52,9 @@ const StackWrapper = styled("div", {
       full: tw`w-full`,
     },
   },
-});
+})
 
-const StackContent = styled("div", {
+const StackContent = styled('div', {
   ...tw`w-full min-w-0`,
 
   variants: {
@@ -65,69 +65,66 @@ const StackContent = styled("div", {
     },
     space: {
       gutter: {
-        "& > .divider": {
-          marginBottom: "$gutter",
+        '& > .divider': {
+          marginBottom: '$gutter',
         },
       },
       large: {
-        "& > .divider": {
-          marginBottom: "$large",
+        '& > .divider': {
+          marginBottom: '$large',
         },
       },
       medium: {
-        "& > .divider": {
-          marginBottom: "$medium",
+        '& > .divider': {
+          marginBottom: '$medium',
         },
       },
       none: {},
       small: {
-        "& > .divider": {
-          marginBottom: "$small",
+        '& > .divider': {
+          marginBottom: '$small',
         },
       },
       xlarge: {
-        "& > .divider": {
-          marginBottom: "$xlarge",
+        '& > .divider': {
+          marginBottom: '$xlarge',
         },
       },
       xsmall: {
-        "& > .divider": {
-          marginBottom: "$xsmall",
+        '& > .divider': {
+          marginBottom: '$xsmall',
         },
       },
       xxlarge: {
-        "& > .divider": {
-          marginBottom: "$xxlarge",
+        '& > .divider': {
+          marginBottom: '$xxlarge',
         },
       },
       xxsmall: {
-        "& > .divider": {
-          marginBottom: "$xxsmall",
+        '& > .divider': {
+          marginBottom: '$xxsmall',
         },
       },
     },
   },
-});
+})
 
 type StackProps = {
-  children: React.ReactNode | React.ReactNode[];
-  align?: Stitches.VariantProps<typeof StackWrapper>["align"];
-  space?: Stitches.VariantProps<typeof StackWrapper>["space"];
-  dividers?: boolean | "strong";
-  width?: Stitches.VariantProps<typeof StackWrapper>["width"];
-  css?: CSS;
-};
+  children: React.ReactNode | React.ReactNode[]
+  align?: Stitches.VariantProps<typeof StackWrapper>['align']
+  space?: Stitches.VariantProps<typeof StackWrapper>['space']
+  dividers?: boolean | 'strong'
+  width?: Stitches.VariantProps<typeof StackWrapper>['width']
+  css?: CSS
+}
 
 /* !Warning: rendering conditions can't be put inside <stack children components because <Stack creates void divs 
   even if components returns null, creating unecessary margins */
-const Stack = React.forwardRef(function Stack(
-  props: StackProps,
-  ref: React.Ref<HTMLDivElement>
-) {
+const Stack = React.forwardRef(function Stack(props: StackProps, ref: React.Ref<HTMLDivElement>) {
   return (
     <StackWrapper
       align={props.align}
-      space={props.space ?? "none"}
+      space={props.space ?? 'none'}
       width={props.width}
       css={props.css}
       ref={ref}
@@ -143,29 +140,23 @@ const Stack = React.forwardRef(function Stack(
                 <StackContent key={index} align={props.align}>
                   {child}
                 </StackContent>
-              );
+              )
             } else {
               return (
-                <StackContent
-                  key={index}
-                  space={props.space}
-                  align={props.align}
-                >
+                <StackContent key={index} space={props.space} align={props.align}>
                   {props.dividers === true && <Divider className="divider" />}
-                  {props.dividers === "strong" && (
-                    <Divider className="divider" weight="strong" />
-                  )}
+                  {props.dividers === 'strong' && <Divider className="divider" weight="strong" />}
                   {child}
                 </StackContent>
-              );
+              )
             }
           })
       ) : (
         <>{props.children}</>
       )}
     </StackWrapper>
-  );
-});
+  )
+})
 
-export type { StackProps };
-export { Stack };
+export type { StackProps }
+export { Stack }
