@@ -1,10 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Config } from './config'
-import { App } from './App.tsx'
+import { App } from './App'
 import { BrowserRouter } from 'react-router-dom'
 import { ApolloProvider } from '@apollo/client'
 import { client } from './config/apollo/client'
+import { Theme } from '@radix-ui/themes'
+import '@radix-ui/themes/styles.css'
 import './index.css'
 
 void main()
@@ -15,7 +17,9 @@ async function main() {
       <BrowserRouter>
         <ApolloProvider client={client}>
           <Config>
-            <App />
+            <Theme>
+              <App />
+            </Theme>
           </Config>
         </ApolloProvider>
       </BrowserRouter>

@@ -32,7 +32,7 @@ const colors = {
   ...aliasPaletteTokens('amber', 'caution' as const),
   ...aliasPaletteTokens('rose', 'critical' as const),
   ...aliasPaletteTokens('sky', 'info' as const),
-  ...aliasPaletteTokens('blueGray', 'neutral' as const),
+  ...aliasPaletteTokens('slate', 'neutral' as const),
   ...aliasPaletteTokens('emerald', 'positive' as const),
   ...aliasPaletteTokens('violet', 'promote' as const),
   // These palettes are Tailwind V3-only and we are still on V2

@@ -49,6 +49,7 @@ const Text = styled('span', {
       link: tw`text-white cursor-pointer`,
       secondary: tw`text-gray-500`,
       white: tw`text-white`,
+      neutral: tw`text-gray-900`,
     },
     truncate: {
       noEllipsis: tw`w-auto max-w-full inline-block whitespace-nowrap overflow-clip overflow-hidden`,
