@@ -16,11 +16,12 @@ func main() {
 		port = defaultPort
 	}
 
-	mysqlSource := os.Getenv("MYSQL_SOURCE")
-	if mysqlSource == "" {
-		mysqlSource = "root:password@tcp(localhost:3306)/patitas"
+	dbSource := os.Getenv("DATABASE_URL")
+	if dbSource == "" {
+		log.Fatal("DATABASE_URL not found")
 	}
-	db, err := database.NewMySql(mysqlSource)
+
+	db, err := database.NewPostgres(dbSource)
 	if err != nil {
 		log.Fatal(err)
 	}

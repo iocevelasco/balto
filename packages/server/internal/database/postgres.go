@@ -6,27 +6,33 @@ import (
 	"log"
 
 	"github.com/iocevelasco/patitas/internal/types"
+	_ "github.com/jackc/pgx/v4/stdlib"
 )
 
-type MySql struct {
+type Postgres struct {
 	db *sql.DB
 }
 
-func NewMySql(dataSourceName string) (*MySql, error) {
-	db, err := sql.Open("mysql", dataSourceName)
+func NewPostgres(dataSourceName string) (*Postgres, error) {
+	db, err := sql.Open("pgx", dataSourceName)
 	if err != nil {
 		log.Printf("error opening database: %v", err)
 		return nil, err
 	}
 
-	return &MySql{db: db}, nil
+	err = db.Ping()
+	if err != nil {
+		return nil, err
+	}
+
+	return &Postgres{db: db}, nil
 }
 
-func (m *MySql) Close() error {
+func (m *Postgres) Close() error {
 	return m.db.Close()
 }
 
-func (m *MySql) GetTodos(ctx context.Context) ([]*types.Todo, error) {
+func (m *Postgres) GetTodos(ctx context.Context) ([]*types.Todo, error) {
 	var todos []*types.Todo
 	rows, err := m.db.QueryContext(ctx, "SELECT * FROM todos")
 	if err != nil {
@@ -48,19 +54,19 @@ func (m *MySql) GetTodos(ctx context.Context) ([]*types.Todo, error) {
 	return todos, nil
 }
 
-func (m *MySql) CreateTodo(ctx context.Context, todo *types.Todo) (int64, error) {
-	stmt, err := m.db.Prepare("INSERT INTO todos (text, done) VALUES (?, ?)")
+func (m *Postgres) CreateTodo(ctx context.Context, todo *types.Todo) (int64, error) {
+	stmt, err := m.db.Prepare("INSERT INTO todos (text, done) VALUES ($1, $2) RETURNING id")
 	if err != nil {
 		log.Printf("error preparing statement: %v", err)
 		return 0, err
 	}
 	defer stmt.Close()
 
-	res, err := stmt.ExecContext(ctx, todo.Text, todo.Done)
+	var id int
+	err = stmt.QueryRowContext(ctx, todo.Text, todo.Done).Scan(&id)
 	if err != nil {
-		log.Printf("error inserting todo: %v", err)
 		return 0, err
 	}
 
-	return res.LastInsertId()
+	return int64(id), nil
 }
