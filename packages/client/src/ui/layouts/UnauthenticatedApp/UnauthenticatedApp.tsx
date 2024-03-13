@@ -9,18 +9,14 @@ interface UnauthenticatedAppProps {
 }
 
 const UnauthenticatedApp = (props: UnauthenticatedAppProps) => {
-  const contextValue = React.useContext(RouteContext)
-
   return (
-    <React.Suspense fallback={'...loading'}>
-      <RouteContext.Provider value={contextValue}>
-        <Box display="flex" flexDirection="column" height="screen">
-          <Header />
-          {props.children}
-          <Footer />
-        </Box>
-      </RouteContext.Provider>
-    </React.Suspense>
+    <Box display="flex" flexDirection="column" height="screen">
+      <Header />
+      <Box display="flex" flexGrow="1" justifyContent="center" padding="large">
+        {props.children}
+      </Box>
+      <Footer />
+    </Box>
   )
 }
 

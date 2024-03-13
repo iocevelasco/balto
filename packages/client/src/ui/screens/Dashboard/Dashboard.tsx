@@ -7,17 +7,15 @@ import { UnauthenticatedApp } from 'src/ui/layouts/UnauthenticatedApp'
 function Dashboard() {
   return (
     <UnauthenticatedApp>
-      <Box display="flex" flexGrow="1" justifyContent="center">
-        <Text truncate="noEllipsis" tone="black" weight="medium" size="xlarge">
-          dashboard
-        </Text>
-        <form>
-          <input type="text" />
-          <Button size="xsmall" type="submit" onClick={() => console.log('click')}>
-            submit
-          </Button>
-        </form>
-      </Box>
+      <Text truncate="noEllipsis" tone="black" weight="medium" size="xlarge">
+        dashboard
+      </Text>
+      <form>
+        <input type="text" />
+        <Button size="xsmall" type="submit" onClick={() => console.log('click')}>
+          submit
+        </Button>
+      </form>
     </UnauthenticatedApp>
   )
 }

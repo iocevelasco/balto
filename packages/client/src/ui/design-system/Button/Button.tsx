@@ -40,8 +40,6 @@ type ButtonOwnProps = React.ComponentProps<'button'> &
     trailingIcon?: React.ReactNode
     size?: typeof ButtonSize[keyof typeof ButtonSize]
     iconLabel?: string
-    /* text to display bellow the button */
-    buttonLabel?: string | undefined
     iconSize?: IconProps['size']
   }
 
@@ -53,7 +51,6 @@ const Button = React.forwardRef(function Button(props, ref) {
     trailingIcon,
     size: buttonSize = ButtonSize.STANDARD,
     iconLabel,
-    buttonLabel,
     iconSize,
     ...baseButtonProps
   } = props
@@ -83,9 +80,6 @@ const Button = React.forwardRef(function Button(props, ref) {
       disabled={isDisabled}
       size={buttonSize}
       role={isAsLink ? undefined : 'button'}
-      style={{
-        ...(buttonLabel ? { position: 'relative' } : {}),
-      }}
     >
       {leadingIcon && !loading && (
         <Box
@@ -123,24 +117,6 @@ const Button = React.forwardRef(function Button(props, ref) {
           <Icon size={iconSizeUsed} label={iconLabel ?? 'trailing icon'}>
             {trailingIcon}
           </Icon>
-        </Box>
-      )}
-      {buttonLabel && (
-        <Box
-          position="absolute"
-          css={{
-            backgroundColor: 'white',
-            borderRadius: '4px',
-            bottom: '-6px',
-            left: 'auto',
-            lineHeight: '0.25rem',
-            padding: '2px',
-            right: 'auto',
-          }}
-        >
-          <Text truncate="noEllipsis" tone="neutral" weight="medium" size="xxsmall">
-            {buttonLabel}
-          </Text>
         </Box>
       )}
     </BaseButton>
