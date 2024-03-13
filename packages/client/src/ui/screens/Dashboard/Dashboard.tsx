@@ -13,7 +13,9 @@ function Dashboard() {
         </Text>
         <form>
           <input type="text" />
-          <Button type="submit">submit</Button>
+          <Button size="xsmall" type="submit" onClick={() => console.log('click')}>
+            submit
+          </Button>
         </form>
       </Box>
     </UnauthenticatedApp>

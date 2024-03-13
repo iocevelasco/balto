@@ -1,8 +1,9 @@
 import type * as Stitches from '@stitches/react'
 import tw from 'twin.macro'
 import { styled } from 'src/config/stitches'
+import { Button } from '@radix-ui/themes'
 
-const BaseButton = styled('button', {
+const BaseButton = styled(Button, {
   ...tw`
     inline-flex
     justify-center

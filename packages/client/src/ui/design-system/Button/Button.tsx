@@ -43,7 +43,6 @@ type ButtonOwnProps = React.ComponentProps<'button'> &
     /* text to display bellow the button */
     buttonLabel?: string | undefined
     iconSize?: IconProps['size']
-    dataIntercomTarget: string
   }
 
 const Button = React.forwardRef(function Button(props, ref) {
@@ -56,7 +55,6 @@ const Button = React.forwardRef(function Button(props, ref) {
     iconLabel,
     buttonLabel,
     iconSize,
-    dataIntercomTarget,
     ...baseButtonProps
   } = props
 
@@ -85,7 +83,6 @@ const Button = React.forwardRef(function Button(props, ref) {
       disabled={isDisabled}
       size={buttonSize}
       role={isAsLink ? undefined : 'button'}
-      data-intercom-target={dataIntercomTarget}
       style={{
         ...(buttonLabel ? { position: 'relative' } : {}),
       }}
@@ -93,7 +90,7 @@ const Button = React.forwardRef(function Button(props, ref) {
       {leadingIcon && !loading && (
         <Box
           display="flex"
-          marginRight={children ? 'xsmall' : undefined}
+          paddingRight={children ? 'xsmall' : undefined}
           css={children ? tw`-ml-0.5` : undefined}
         >
           <Icon className="leadingIcon" size={iconSizeUsed} label={iconLabel ?? 'leading icon'}>
@@ -122,7 +119,7 @@ const Button = React.forwardRef(function Button(props, ref) {
         children
       )}
       {trailingIcon && !loading && (
-        <Box display="flex" marginLeft="xsmall" css={tw`-mr-0.5`}>
+        <Box display="flex" paddingRight="xsmall" css={tw`-mr-0.5`}>
           <Icon size={iconSizeUsed} label={iconLabel ?? 'trailing icon'}>
             {trailingIcon}
           </Icon>
