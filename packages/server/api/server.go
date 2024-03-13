@@ -19,13 +19,13 @@ func NewServer(port string, db database.Database) *server {
 	return &server{port: port, db: db}
 }
 
-func (a *server) Run() error {
-	a.registerHandlers()
-	return http.ListenAndServe(":"+a.port, nil)
+func (s *server) Run() error {
+	s.registerHandlers()
+	return http.ListenAndServe(":"+s.port, nil)
 }
 
-func (a *server) registerHandlers() {
-	todosService := services.NewTodosService(a.db)
+func (s *server) registerHandlers() {
+	todosService := services.NewTodosService(s.db)
 
 	config := graph.Config{Resolvers: graph.NewResolver(todosService)}
 	schema := graph.NewExecutableSchema(config)
