@@ -2,29 +2,29 @@
 
 ## Installation
 
-### MySQL
-```
-sudo apt update
-```
-```
-sudo apt install mysql-server
-```
+### Go
+Hay que tener instalada la version **1.22**.
 
+Para instalar las dependencias ejecutar:
 ```
 go mod tidy
 ```
 
-```
-install mysql
-```
+Hay que instalar PostgresSQL.
+
+Usar las queries de la carpeta database/migrations para crear el esquema.
 
 ## Usage
-Connect to http://localhost:{port}/ for GraphQL playground
 
-
+Para correr el servidor ejecutar:
 ```
 make run
 ```
 
+Conectarse a http://localhost:8080/ para usar el GraphQL playground
+
+## GraphQL Generator
+Luego de editar los archivos con los esquemas, ejecutar:
 ```
 go generate ./...
+```
