@@ -415,6 +415,11 @@ const Box = styled('div', {
       relative: tw`relative`,
       sticky: tw`sticky`,
     },
+    aspectRatio: {
+      square: tw`aspect-w-1 aspect-h-1`,
+      '16/9': tw`aspect-w-16 aspect-h-9`,
+      '4/3': tw`aspect-w-4 aspect-h-3`,
+    },
   },
 })
 

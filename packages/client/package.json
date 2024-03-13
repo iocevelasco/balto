@@ -14,6 +14,8 @@
     "@apollo/client": "^3.9.6",
     "@apollo/react-hooks": "^4.0.0",
     "@fontsource/source-sans-pro": "^5.0.8",
+    "@radix-ui/react-accessible-icon": "^1.0.3",
+    "@radix-ui/react-polymorphic": "^0.0.14",
     "@stitches/react": "^1.2.8",
     "@stitches/tailwind": "^9.0.0-alpha.8",
     "@vitejs/plugin-react": "^4.2.1",

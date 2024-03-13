@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Config } from './config'
-import { App } from './App.tsx'
+import { App } from './App'
 import { BrowserRouter } from 'react-router-dom'
 import { ApolloProvider } from '@apollo/client'
 import { client } from './config/apollo/client'
