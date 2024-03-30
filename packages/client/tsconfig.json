@@ -16,10 +16,12 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
+    "declaration": true,
     "paths": {
       "src/*": ["src/*"],
+      "mocks/*": ["mocks/*"],
     }
   },
-  "include": ["./src/**/*"],
+  "include": ["./src/**/*", "./src/utils/types/**/*"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
