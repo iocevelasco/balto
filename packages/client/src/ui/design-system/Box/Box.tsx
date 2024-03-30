@@ -1,7 +1,8 @@
 import tw from 'twin.macro'
 import { styled } from 'src/config/stitches'
+import { Box as RadixBox } from '@radix-ui/themes'
 
-const Box = styled('div', {
+const Box = styled(RadixBox, {
   compoundVariants: [
     {
       boxShadow: 'xsmall',
