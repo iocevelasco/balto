@@ -1,4 +1,3 @@
-import React from 'react'
 import { PetCardContainer } from './CardPetContainer'
 import { Grid } from '@radix-ui/themes'
 import type { Pet } from 'src/utils/types/pet'

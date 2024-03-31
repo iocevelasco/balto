@@ -25,6 +25,7 @@
     "apollo-client": "^2.6.10",
     "apollo-link-http": "^1.5.17",
     "apollo-server": "^3.13.0",
+    "framer-motion": "^11.0.24",
     "graphql": "^16.8.1",
     "graphql-tag": "^2.12.6",
     "path": "^0.12.7",
