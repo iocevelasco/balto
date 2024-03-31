@@ -1,4 +1,3 @@
-import * as React from 'react'
 import tw from 'twin.macro'
 import { styled } from 'src/config/stitches'
 import type { NavigationComponentProps } from '../Navigation'

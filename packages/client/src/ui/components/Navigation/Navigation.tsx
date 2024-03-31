@@ -1,5 +1,3 @@
-import * as React from 'react'
-
 import { createComponentHook } from 'src/utils/types/createComponentHook'
 import { useBreakpoint } from 'src/utils/hooks/useBreakpoint'
 import { NavbarNavigation as DesktopNavbarNavigation } from './desktop/NavbarNavigation'

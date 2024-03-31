@@ -1,11 +1,9 @@
 import '@fontsource/source-sans-pro'
-import { forms } from './forms'
 import { global } from './index'
 import { preflight } from './preflight'
 
 const globalValues = {
   ...preflight,
-  ...forms,
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   body: {

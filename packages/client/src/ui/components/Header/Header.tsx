@@ -1,4 +1,3 @@
-import React from 'react'
 import { ChevronLeftIcon } from '@heroicons/react/24/solid'
 import { Box } from 'src/ui/design-system/Box'
 import { Stack } from 'src/ui/design-system/Stack'

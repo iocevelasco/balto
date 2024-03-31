@@ -6,8 +6,11 @@
 app = 'patitas'
 primary_region = 'eze'
 
-[build]
-  image = 'flyio/hellofly:latest'
+[[experimental.mounts]]
+  source = "/packages/client/dist"
+  destination = "/app"
+  read_only = true
+
 
 [http_service]
   internal_port = 8080

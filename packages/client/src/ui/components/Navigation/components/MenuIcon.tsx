@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { styled } from 'src/config/stitches'
 import { Box } from 'src/ui/design-system/Box'
 import type { IconProps } from 'src/ui/design-system/Icon'
