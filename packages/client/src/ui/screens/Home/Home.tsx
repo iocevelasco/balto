@@ -1,22 +1,25 @@
-import React from 'react'
-import { Text } from 'src/ui/design-system/Text'
 import { UnauthenticatedApp } from 'src/ui/layouts/UnauthenticatedApp'
-import { PetList } from './components/PetsList/PetsList'
-import { Flex } from '@radix-ui/themes'
+import { PetList } from './components/PetsList'
+import { Flex, Text } from '@radix-ui/themes'
 
-function Dashboard() {
+function HomeScreen() {
   return (
     <UnauthenticatedApp>
       <Flex
         direction="column"
         gap="3"
         width="100%"
+        p={{
+          initial: '3',
+          md: '5',
+          lg: '7',
+        }}
         style={{
           overflow: 'scroll',
         }}
       >
-        <Text truncate="noEllipsis" tone="black" weight="medium" size="xlarge">
-          dashboard
+        <Text align="center" weight="medium">
+          Dashboard
         </Text>
         <PetList />
       </Flex>
@@ -24,4 +27,4 @@ function Dashboard() {
   )
 }
 
-export { Dashboard }
+export { HomeScreen }

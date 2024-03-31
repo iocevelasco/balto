@@ -6,8 +6,8 @@ import { BrowserRouter } from 'react-router-dom'
 import { ApolloProvider } from '@apollo/client'
 import { client } from './config/apollo/client'
 import { Theme } from '@radix-ui/themes'
-import '@radix-ui/themes/styles.css'
 import './index.css'
+import '@radix-ui/themes/styles.css'
 
 void main()
 
@@ -17,7 +17,7 @@ async function main() {
       <BrowserRouter>
         <ApolloProvider client={client}>
           <Config>
-            <Theme>
+            <Theme radius="full" accentColor="amber">
               <App />
             </Theme>
           </Config>

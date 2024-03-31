@@ -10,9 +10,9 @@ import { matchPath } from 'react-router-dom'
 function Header() {
   const tabs: NavigationProps['tabs'] = [
     {
-      active: !!matchPath(APP_BASE_ROUTES.dashboard, location.pathname),
+      active: !!matchPath(APP_BASE_ROUTES.home, location.pathname),
       icon: <ChevronLeftIcon />,
-      name: 'dashboard',
+      name: 'home',
       url: '/',
     },
     {

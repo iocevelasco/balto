@@ -7,6 +7,8 @@
       "breed": "Golden Retriever",
       "age": 3,
       "color": "Golden",
+      "sex": "Male",
+      "location": "New York",
       "image": "https://example.com/fluffy_image.jpg"
     },
     {
@@ -16,6 +18,8 @@
       "breed": "Siamese",
       "age": 5,
       "color": "Cream",
+      "sex": "Female",
+      "location": "Los Angeles",
       "image": "https://example.com/whiskers_image.jpg"
     },
     {
@@ -25,6 +29,8 @@
       "breed": "German Shepherd",
       "age": 2,
       "color": "Black and Tan",
+      "sex": "Male",
+      "location": "Chicago",
       "image": "https://example.com/max_image.jpg"
     },
     {
@@ -34,6 +40,8 @@
       "breed": "Persian",
       "age": 4,
       "color": "White",
+      "sex": "Female",
+      "location": "Houston",
       "image": "https://example.com/bella_image.jpg"
     },
     {
@@ -43,6 +51,8 @@
       "breed": "Boxer",
       "age": 1,
       "color": "Brindle",
+      "sex": "Male",
+      "location": "Philadelphia",
       "image": "https://example.com/rocky_image.jpg"
     },
     {
@@ -52,6 +62,8 @@
       "breed": "Dwarf Rabbit",
       "age": 2,
       "color": "Black and White",
+      "sex": "Male",
+      "location": "Phoenix",
       "image": "https://example.com/oreo_image.jpg"
     },
     {
@@ -61,6 +73,8 @@
       "breed": "Parrot",
       "age": 8,
       "color": "Multicolored",
+      "sex": "Male",
+      "location": "San Antonio",
       "image": "https://example.com/charlie_image.jpg"
     },
     {
@@ -70,6 +84,8 @@
       "breed": "Syrian Hamster",
       "age": 1,
       "color": "Golden",
+      "sex": "Male",
+      "location": "San Diego",
       "image": "https://example.com/simba_image.jpg"
     },
     {
@@ -79,6 +95,8 @@
       "breed": "Labrador Retriever",
       "age": 6,
       "color": "Black",
+      "sex": "Female",
+      "location": "Dallas",
       "image": "https://example.com/luna_image.jpg"
     },
     {
@@ -88,277 +106,9 @@
       "breed": "Holland Lop",
       "age": 3,
       "color": "White",
+      "sex": "Female",
+      "location": "San Jose",
       "image": "https://example.com/snowball_image.jpg"
-    },
-    {
-      "id": 11,
-      "name": "Milo",
-      "species": "Cat",
-      "breed": "Maine Coon",
-      "age": 3,
-      "color": "Brown Tabby",
-      "image": "https://example.com/milo_image.jpg"
-    },
-    {
-      "id": 12,
-      "name": "Buddy",
-      "species": "Dog",
-      "breed": "Beagle",
-      "age": 4,
-      "color": "Tricolor",
-      "image": "https://example.com/buddy_image.jpg"
-    },
-    {
-      "id": 13,
-      "name": "Chloe",
-      "species": "Dog",
-      "breed": "Shih Tzu",
-      "age": 2,
-      "color": "White and Brown",
-      "image": "https://example.com/chloe_image.jpg"
-    },
-    {
-      "id": 14,
-      "name": "Smokey",
-      "species": "Cat",
-      "breed": "Russian Blue",
-      "age": 6,
-      "color": "Gray",
-      "image": "https://example.com/smokey_image.jpg"
-    },
-    {
-      "id": 15,
-      "name": "Daisy",
-      "species": "Dog",
-      "breed": "Poodle",
-      "age": 5,
-      "color": "Apricot",
-      "image": "https://example.com/daisy_image.jpg"
-    },
-    {
-      "id": 16,
-      "name": "Ginger",
-      "species": "Cat",
-      "breed": "Tabby",
-      "age": 7,
-      "color": "Orange",
-      "image": "https://example.com/ginger_image.jpg"
-    },
-    {
-      "id": 17,
-      "name": "Jack",
-      "species": "Dog",
-      "breed": "Jack Russell Terrier",
-      "age": 2,
-      "color": "White and Brown",
-      "image": "https://example.com/jack_image.jpg"
-    },
-    {
-      "id": 18,
-      "name": "Oliver",
-      "species": "Cat",
-      "breed": "British Shorthair",
-      "age": 3,
-      "color": "Blue",
-      "image": "https://example.com/oliver_image.jpg"
-    },
-    {
-      "id": 19,
-      "name": "Lucky",
-      "species": "Dog",
-      "breed": "Chihuahua",
-      "age": 1,
-      "color": "Brown",
-      "image": "https://example.com/lucky_image.jpg"
-    },
-    {
-      "id": 20,
-      "name": "Patch",
-      "species": "Cat",
-      "breed": "Calico",
-      "age": 2,
-      "color": "White, Black, and Orange",
-      "image": "https://example.com/patch_image.jpg"
-    },
-    {
-      "id": 21,
-      "name": "Biscuit",
-      "species": "Dog",
-      "breed": "Cavalier King Charles Spaniel",
-      "age": 4,
-      "color": "Blenheim",
-      "image": "https://example.com/biscuit_image.jpg"
-    },
-    {
-      "id": 22,
-      "name": "Mittens",
-      "species": "Cat",
-      "breed": "Ragdoll",
-      "age": 5,
-      "color": "Seal Point",
-      "image": "https://example.com/mittens_image.jpg"
-    },
-    {
-      "id": 23,
-      "name": "Rocky",
-      "species": "Ferret",
-      "breed": "Sable",
-      "age": 2,
-      "color": "Sable",
-      "image": "https://example.com/rocky_ferret_image.jpg"
-    },
-    {
-      "id": 24,
-      "name": "Pepper",
-      "species": "Guinea Pig",
-      "breed": "Abyssinian",
-      "age": 1,
-      "color": "Black",
-      "image": "https://example.com/pepper_guinea_pig_image.jpg"
-    },
-    {
-      "id": 25,
-      "name": "Shadow",
-      "species": "Dog",
-      "breed": "Siberian Husky",
-      "age": 3,
-      "color": "Black and White",
-      "image": "https://example.com/shadow_image.jpg"
-    },
-    {
-      "id": 26,
-      "name": "Sasha",
-      "species": "Cat",
-      "breed": "Sphynx",
-      "age": 2,
-      "color": "Pink",
-      "image": "https://example.com/sasha_image.jpg"
-    },
-    {
-      "id": 27,
-      "name": "Coco",
-      "species": "Dog",
-      "breed": "Pomeranian",
-      "age": 4,
-      "color": "Cream",
-      "image": "https://example.com/coco_image.jpg"
-    },
-    {
-      "id": 28,
-      "name": "Nala",
-      "species": "Cat",
-      "breed": "Bengal",
-      "age": 1,
-      "color": "Brown Spotted Tabby",
-      "image": "https://example.com/nala_image.jpg"
-    },
-    {
-      "id": 29,
-      "name": "Teddy",
-      "species": "Dog",
-      "breed": "Pug",
-      "age": 2,
-      "color": "Fawn",
-      "image": "https://example.com/teddy_image.jpg"
-    },
-    {
-      "id": 30,
-      "name": "Mittens",
-      "species": "Dog",
-      "breed": "Labradoodle",
-      "age": 3,
-      "color": "Apricot",
-      "image": "https://example.com/mittens_labradoodle_image.jpg"
-    },
-    {
-      "id": 31,
-      "name": "Smokey",
-      "species": "Rat",
-      "breed": "Dumbo Rat",
-      "age": 1,
-      "color": "Gray",
-      "image": "https://example.com/smokey_rat_image.jpg"
-    },
-    {
-      "id": 32,
-      "name": "Nibbles",
-      "species": "Rabbit",
-      "breed": "Mini Rex",
-      "age": 2,
-      "color": "Chestnut",
-      "image": "https://example.com/nibbles_image.jpg"
-    },
-    {
-      "id": 33,
-      "name": "Cinnamon",
-      "species": "Guinea Pig",
-      "breed": "Teddy Guinea Pig",
-      "age": 3,
-      "color": "Red",
-      "image": "https://example.com/cinnamon_image.jpg"
-    },
-    {
-      "id": 34,
-      "name": "Rocky",
-      "species": "Turtle",
-      "breed": "Red-Eared Slider",
-      "age": 5,
-      "color": "Green",
-      "image": "https://example.com/rocky_turtle_image.jpg"
-    },
-    {
-      "id": 35,
-      "name": "Holly",
-      "species": "Dog",
-      "breed": "Dachshund",
-      "age": 4,
-      "color": "Red",
-      "image": "https://example.com/holly_image.jpg"
-    },
-    {
-      "id": 36,
-      "name": "Whiskers",
-      "species": "Guinea Pig",
-      "breed": "Silkie",
-      "age": 2,
-      "color": "White",
-      "image": "https://example.com/whiskers_guinea_pig_image.jpg"
-    },
-    {
-      "id": 37,
-      "name": "Loki",
-      "species": "Cat",
-      "breed": "Bombay",
-      "age": 6,
-      "color": "Black",
-      "image": "https://example.com/loki_image.jpg"
-    },
-    {
-      "id": 38,
-      "name": "Rusty",
-      "species": "Dog",
-      "breed": "Golden Retriever",
-      "age": 2,
-      "color": "Red",
-      "image": "https://example.com/rusty_image.jpg"
-    },
-    {
-      "id": 39,
-      "name": "Socks",
-      "species": "Cat",
-      "breed": "Domestic Shorthair",
-      "age": 3,
-      "color": "White with Black",
-      "image": "https://example.com/socks_image.jpg"
-    },
-    {
-      "id": 40,
-      "name": "Simba",
-      "species": "Dog",
-      "breed": "Yorkshire Terrier",
-      "age": 1,
-      "color": "Black and Tan",
-      "image": "https://example.com/simba_yorkshire_terrier_image.jpg"
     }
   ]
 }
