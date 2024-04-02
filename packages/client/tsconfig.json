@@ -22,6 +22,6 @@
       "mocks/*": ["mocks/*"],
     }
   },
-  "include": ["./src/**/*", "./src/utils/types/**/*"],
+  "include": ["./src/**/*", "./src/utils/types/**/*", "postcss.config.cjs"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
