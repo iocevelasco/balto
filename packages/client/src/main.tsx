@@ -6,8 +6,8 @@ import { BrowserRouter } from 'react-router-dom'
 import { ApolloProvider } from '@apollo/client'
 import { client } from './config/apollo/client'
 import { Theme } from '@radix-ui/themes'
-import './index.css'
 import '@radix-ui/themes/styles.css'
+import './index.css'
 
 void main()
 

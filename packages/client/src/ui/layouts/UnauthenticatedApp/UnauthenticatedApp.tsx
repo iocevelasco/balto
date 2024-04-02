@@ -1,11 +1,9 @@
-import React from 'react'
 import { Footer } from 'src/ui/components/Footer'
 import { Header } from 'src/ui/components/Header'
 import { Box, Flex } from '@radix-ui/themes'
+import { ReactNode } from 'src/utils/types/commons'
 
-interface UnauthenticatedAppProps {
-  children: React.ReactNode | React.ReactNode[]
-}
+interface UnauthenticatedAppProps extends ReactNode {}
 
 const UnauthenticatedApp = (props: UnauthenticatedAppProps) => {
   return (

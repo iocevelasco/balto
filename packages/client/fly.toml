@@ -1,15 +1,15 @@
-# fly.toml app configuration file generated for patitas2 on 2024-03-31T18:49:53-03:00
+# fly.toml app configuration file generated for patitas-divine-snowflake-5745 on 2024-04-02T18:47:46-03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'patitas2'
+app = 'patitas-divine-snowflake-5745'
 primary_region = 'scl'
 
 [build]
 
 [http_service]
-  internal_port = 8080
+  internal_port = 80
   force_https = true
   auto_stop_machines = true
   auto_start_machines = true
