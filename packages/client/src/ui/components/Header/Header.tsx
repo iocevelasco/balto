@@ -1,6 +1,4 @@
 import { ChevronLeftIcon } from '@heroicons/react/24/solid'
-import { Stack } from 'src/ui/design-system/Stack'
-import { Text } from 'src/ui/design-system/Text'
 import { ReactComponent as Brand } from 'src/assets/brand/brand-white.svg'
 import { Navigation, type NavigationProps } from '../Navigation'
 import { APP_BASE_ROUTES } from 'src/App'

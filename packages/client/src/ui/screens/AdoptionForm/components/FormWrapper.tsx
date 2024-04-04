@@ -1,9 +1,10 @@
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useForm, Controller, Resolver } from 'react-hook-form'
-import { Flex, RadioGroup, TextField } from '@radix-ui/themes'
+import { Flex, RadioGroup } from '@radix-ui/themes'
+import { Input } from 'src/ui/components/Input'
 import { schema } from '../AdoptionForm.utils'
 import type { FormDataType } from '../AdoptionForm.utils'
-import quizList from 'mocks/adoption-form-question.json'
+import quizList from 'src/mocks/adoption-form-question.json'
 
 const FormWrapper = () => {
   const {
@@ -38,9 +39,7 @@ const FormWrapper = () => {
               <Controller
                 control={control}
                 name={question.key}
-                render={({ field }) => (
-                  <TextField.Input type={question.element} variant="soft" size="3" {...field} />
-                )}
+                render={({ field }) => <Input type={question.element} {...field} />}
               />
             )}
             {errors[question.key] && <p className="error">This field is required</p>}

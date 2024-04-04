@@ -14,6 +14,7 @@ export default defineConfig({
     alias: {
       "src": path.resolve(__dirname, "./src"),
       "mocks": path.resolve(__dirname, "./mocks"),
+      "@": path.resolve(__dirname, "./@"),
     },
   },
   define: {
@@ -22,6 +23,6 @@ export default defineConfig({
   server: {
     host: true,
     strictPort: true,
-    port: 5000,
+    port: 8080,
   },
 })

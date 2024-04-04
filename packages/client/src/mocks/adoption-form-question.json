@@ -26,8 +26,8 @@
     },
     {
       "id": 5,
-      "question": "Your Instagram username, Facebook, and email:",
-      "element": "text",
+      "question": "Email:",
+      "element": "email",
       "key": "social_media_email"
     },
     {
