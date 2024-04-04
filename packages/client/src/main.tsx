@@ -7,7 +7,7 @@ import { ApolloProvider } from '@apollo/client'
 import { client } from './config/apollo/client'
 import { Theme } from '@radix-ui/themes'
 import '@radix-ui/themes/styles.css'
-import './index.css'
+import './globals.css'
 
 void main()
 

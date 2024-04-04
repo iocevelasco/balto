@@ -15,9 +15,9 @@ const UnauthenticatedApp = (props: UnauthenticatedAppProps) => {
         overflowY: 'auto',
       }}
     >
-      <Flex direction="column" justify="between" className="h-screen">
+      <Flex direction="column" className="h-screen">
         <Header />
-        <Box style={{ overflowY: 'scroll', display: 'flex' }}>{props.children}</Box>
+        <Box style={{ display: 'flex' }}>{props.children}</Box>
       </Flex>
       <Footer />
     </Flex>
