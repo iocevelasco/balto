@@ -1,9 +1,7 @@
+import { Flex } from '@radix-ui/themes'
 import { styled } from 'src/config/stitches'
-import { Box } from 'src/ui/design-system/Box'
-import type { IconProps } from 'src/ui/design-system/Icon'
-import { Icon } from 'src/ui/design-system/Icon'
 
-type MenuIconProps = IconProps & {
+type MenuIconProps = {
   notifications?: JSX.Element
 }
 
@@ -14,16 +12,15 @@ const NotificationBadgeWrapper = styled('div', {
 })
 
 function MenuIcon(props: MenuIconProps) {
-  const { notifications, ...iconProps } = props
+  const { notifications } = props
   if (notifications) {
     return (
-      <Box display="flex" justifyContent="center">
+      <Flex display="flex" justify="center">
         <NotificationBadgeWrapper>{notifications}</NotificationBadgeWrapper>
-        <Icon css={{ justifySelf: 'center' }} {...iconProps} />
-      </Box>
+      </Flex>
     )
   }
-  return <Icon css={{ justifySelf: 'center' }} {...iconProps} />
+  return <p>icon</p>
 }
 
 export type { MenuIconProps }

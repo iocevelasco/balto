@@ -1,10 +1,11 @@
 import { ChevronLeftIcon } from '@heroicons/react/24/solid'
-import { Box } from 'src/ui/design-system/Box'
 import { Stack } from 'src/ui/design-system/Stack'
 import { Text } from 'src/ui/design-system/Text'
 import { Navigation, type NavigationProps } from '../Navigation'
 import { APP_BASE_ROUTES } from 'src/App'
 import { matchPath } from 'react-router-dom'
+import { Avatar } from '../Avatar/Avatar'
+import { Flex } from '@radix-ui/themes'
 
 function Header() {
   const tabs: NavigationProps['tabs'] = [
@@ -23,10 +24,11 @@ function Header() {
   ]
 
   return (
-    <Box
-      position="sticky"
-      background="brand"
-      css={{
+    <Flex
+      className="bg-yellow-400"
+      style={{
+        position: 'sticky',
+        background: 'brand',
         height: '60px',
       }}
     >
@@ -38,11 +40,12 @@ function Header() {
           alignItems: 'center',
         }}
       >
-        <Box display="flex" justifyContent="spaceBetween" alignItems="center"></Box>
+        <Flex display="flex" justify="between" align="center"></Flex>
         <Text>header</Text>
         <Navigation tabs={tabs} />
+        <Avatar />
       </Stack>
-    </Box>
+    </Flex>
   )
 }
 

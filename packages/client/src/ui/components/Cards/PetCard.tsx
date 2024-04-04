@@ -1,4 +1,4 @@
-import { Card, Text, Box, Inset, Strong } from '@radix-ui/themes'
+import { Card, Text, Box, Inset, Strong, Flex } from '@radix-ui/themes'
 import { Button } from 'src/ui/design-system/Button/Button'
 import type { Pet } from 'src/utils/types/pet'
 
@@ -11,14 +11,16 @@ interface BaseCardProps {
 const BaseCard = (props: BaseCardProps) => {
   return (
     <Box>
-      <Card size="2">
-        <Inset clip="padding-box" side="top" pb="current">
-          {props.thumbnail || <Box></Box>}
-        </Inset>
-        {props.children}
-        <Button size="3" onClick={props.onClick}>
-          Adopt
-        </Button>
+      <Card size="2" className="hover:bg-yellow-100 hover:drop-shadow-lg border-transparent">
+        <Flex gap="1" direction="column">
+          <Inset clip="padding-box" side="top" pb="current">
+            {props.thumbnail || <Box></Box>}
+          </Inset>
+          {props.children}
+          <Button size="3" m="2" onClick={props.onClick}>
+            Adopt
+          </Button>
+        </Flex>
       </Card>
     </Box>
   )
@@ -46,11 +48,14 @@ const PetCard = (props: PetCardProps) => {
 
   return (
     <BaseCard thumbnail={image} onClick={props.onClick}>
-      <Box>
+      <Flex gap="1" direction="column">
         <Strong>{props.petDetails.name}</Strong>
-        <Text>{props.petDetails.age}</Text>
-        <Text>{props.petDetails.breed}</Text>
-      </Box>
+        <Flex gap="2">
+          <Text>{props.petDetails.sex},</Text>
+          <Text>Age {props.petDetails.age}</Text>
+        </Flex>
+        <Text>{props.petDetails.location}</Text>
+      </Flex>
     </BaseCard>
   )
 }

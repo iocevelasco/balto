@@ -1,36 +1,17 @@
-import { useForm } from 'react-hook-form'
-import { yupResolver } from '@hookform/resolvers/yup'
-import * as yup from 'yup'
+import React from 'react'
+import { FormWrapper } from './components/FormWrapper'
 import { UnauthenticatedApp } from 'src/ui/layouts/UnauthenticatedApp'
+import { Container, Flex, Text } from '@radix-ui/themes'
 
-const schema = yup
-  .object({
-    firstName: yup.string().required(),
-    age: yup.number().positive().integer().required(),
-  })
-  .required()
-
-function AdoptionForm() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    resolver: yupResolver(schema),
-  })
-  const onSubmit = (data: any) => console.log(data)
-
+const AdoptionForm = () => {
   return (
     <UnauthenticatedApp>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input {...register('firstName')} />
-        <p>{errors.firstName?.message}</p>
-
-        <input {...register('age')} />
-        <p>{errors.age?.message}</p>
-
-        <input type="submit" />
-      </form>
+      <Container size="3">
+        <Flex direction="column" m="8" gap="3">
+          <Text size="8">Adoption Form</Text>
+          <FormWrapper />
+        </Flex>
+      </Container>
     </UnauthenticatedApp>
   )
 }
