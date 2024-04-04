@@ -1,11 +1,12 @@
 import { ChevronLeftIcon } from '@heroicons/react/24/solid'
 import { Stack } from 'src/ui/design-system/Stack'
 import { Text } from 'src/ui/design-system/Text'
+import { ReactComponent as Brand } from 'src/assets/brand/brand-white.svg'
 import { Navigation, type NavigationProps } from '../Navigation'
 import { APP_BASE_ROUTES } from 'src/App'
 import { matchPath } from 'react-router-dom'
 import { Avatar } from '../Avatar/Avatar'
-import { Flex } from '@radix-ui/themes'
+import { Box, Container, Flex } from '@radix-ui/themes'
 
 function Header() {
   const tabs: NavigationProps['tabs'] = [
@@ -24,27 +25,16 @@ function Header() {
   ]
 
   return (
-    <Flex
-      className="bg-yellow-400"
-      style={{
-        position: 'sticky',
-        background: 'brand',
-        height: '60px',
-      }}
-    >
-      <Stack
-        space="medium"
-        css={{
-          display: 'flex',
-          alignContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <Flex display="flex" justify="between" align="center"></Flex>
-        <Text>header</Text>
-        <Navigation tabs={tabs} />
-        <Avatar />
-      </Stack>
+    <Flex className="bg-yellow-400 sticky top-0 z-10">
+      <Container size="4">
+        <Box className="flex justify-between align-middle content-center">
+          <Flex display="flex" justify="between" align="center">
+            <Brand className="h-16" />
+          </Flex>
+          <Navigation tabs={tabs} />
+          <Avatar />
+        </Box>
+      </Container>
     </Flex>
   )
 }
