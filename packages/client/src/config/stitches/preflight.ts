@@ -105,9 +105,7 @@ const preflight: CSS = {
     WebkitTextSizeAdjust: '100%',
     fontFamily:
       '"Source Sans Pro", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-    height: '100vh',
     lineHeight: 1.5,
-    overflow: 'hidden',
   },
 
   img: { borderStyle: 'solid' },

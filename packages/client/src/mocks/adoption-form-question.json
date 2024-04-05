@@ -4,247 +4,288 @@
       "id": 1,
       "question": "Name and Last Name:",
       "element": "text",
-      "key": "name_last_name"
+      "key": "name_last_name",
+      "required": true
     },
     {
       "id": 2,
       "question": "Mobile phone number you contacted from: In case the adoption is finalized, we request an alternative contact:",
       "element": "tel",
-      "key": "contact_number"
+      "key": "contact_number",
+      "required": false
     },
     {
       "id": 3,
       "question": "Address",
       "element": "text",
-      "key": "address"
+      "key": "address",
+      "required": true
     },
     {
       "id": 4,
       "question": "City",
       "element": "text",
-      "key": "city"
+      "key": "city",
+      "required": true
     },
     {
       "id": 5,
       "question": "Email:",
       "element": "email",
-      "key": "social_media_email"
+      "key": "social_media_email",
+      "required": true
     },
     {
       "id": 6,
       "question": "What do you do for a living? Specify where you work and how long you've been there",
       "element": "textarea",
-      "key": "occupation"
+      "key": "occupation",
+      "required": true
     },
     {
       "id": 7,
       "question": "Starting with yours, what is the age of each member?",
       "element": "text",
-      "key": "ages_of_members"
+      "key": "ages_of_members",
+      "required": false
     },
     {
       "id": 8,
       "question": "If you work outside, is there someone older at home during the day?",
       "element": "radio",
-      "key": "older_person_at_home"
+      "key": "older_person_at_home",
+      "required": false
     },
     {
       "id": 9,
       "question": "Is anyone in your home allergic to animal fur?",
       "element": "radio",
-      "key": "allergic_to_animal_fur"
+      "key": "allergic_to_animal_fur",
+      "required": false
     },
     {
       "id": 10,
       "question": "Did the allergic person(s) agree with the adoption decision?",
       "element": "radio",
-      "key": "allergic_person_agree_adoption"
+      "key": "allergic_person_agree_adoption",
+      "required": false
     },
     {
       "id": 11,
       "question": "Have you had pets throughout your life?",
       "element": "radio",
-      "key": "had_pets"
+      "key": "had_pets",
+      "required": false
     },
     {
       "id": 12,
       "question": "Have you ever had to give a pet up for adoption?",
       "element": "radio",
-      "key": "given_up_pet_for_adoption"
+      "key": "given_up_pet_for_adoption",
+      "required": false
     },
     {
       "id": 13,
       "question": "What animals do you currently have? Write species and quantity",
       "element": "textarea",
-      "key": "current_pets"
+      "key": "current_pets",
+      "required": false
     },
     {
       "id": 14,
       "question": "Where do they sleep in the house?",
       "element": "textarea",
-      "key": "sleeping_location_of_pets"
+      "key": "sleeping_location_of_pets",
+      "required": false
     },
     {
       "id": 15,
       "question": "Are they neutered/spayed?",
       "element": "radio",
-      "key": "neutered_or_spayed"
+      "key": "neutered_or_spayed",
+      "required": false
     },
     {
       "id": 16,
       "question": "Where do they spend most of their time?",
       "element": "textarea",
-      "key": "time_spent_by_pets"
+      "key": "time_spent_by_pets",
+      "required": false
     },
     {
       "id": 17,
       "question": "What brand of balanced food do they consume?",
       "element": "text",
-      "key": "pet_food_brand"
+      "key": "pet_food_brand",
+      "required": false
     },
     {
       "id": 18,
       "question": "Name of the little animal you consulted about",
       "element": "text",
-      "key": "consulted_animal_name"
+      "key": "consulted_animal_name",
+      "required": false
     },
     {
       "id": 19,
       "question": "How many hours would your new little animal be without human company?",
       "element": "text",
-      "key": "hours_without_human_company"
+      "key": "hours_without_human_company",
+      "required": false
     },
     {
       "id": 20,
       "question": "Where in the house do you expect it to stay for longer periods?",
       "element": "textarea",
-      "key": "expected_location_of_pet"
+      "key": "expected_location_of_pet",
+      "required": false
     },
     {
       "id": 21,
       "question": "Where in the house will it sleep?",
       "element": "textarea",
-      "key": "sleeping_location_of_pet"
+      "key": "sleeping_location_of_pet",
+      "required": false
     },
     {
       "id": 22,
       "question": "What brand of balanced food will you give it?",
       "element": "text",
-      "key": "planned_pet_food_brand"
+      "key": "planned_pet_food_brand",
+      "required": false
     },
     {
       "id": 23,
       "question": "How would you walk them?",
       "element": "textarea",
-      "key": "walking_method"
+      "key": "walking_method",
+      "required": false
     },
     {
       "id": 24,
       "question": "Do you live in a house or an apartment?",
       "element": "radio",
-      "key": "residence_type"
+      "key": "residence_type",
+      "required": false
     },
     {
       "id": 25,
       "question": "Are you an owner or a renter?",
       "element": "radio",
-      "key": "ownership_status"
+      "key": "ownership_status",
+      "required": false
     },
     {
       "id": 26,
       "question": "Does your home have any outdoor space?",
       "element": "radio",
-      "key": "outdoor_space"
+      "key": "outdoor_space",
+      "required": false
     },
     {
       "id": 27,
       "question": "If you have that space, is it securely enclosed?",
       "element": "radio",
-      "key": "securely_enclosed_space"
+      "key": "securely_enclosed_space",
+      "required": false
     },
     {
       "id": 28,
       "question": "Do you have a pool? With or without protection?",
       "element": "radio",
-      "key": "pool_status"
+      "key": "pool_status",
+      "required": false
     },
     {
       "id": 29,
       "question": "If you live in an apartment, are you aware if the building administration allows pets?",
       "element": "radio",
-      "key": "pet_policy_of_building"
+      "key": "pet_policy_of_building",
+      "required": false
     },
     {
       "id": 30,
       "question": "What would you do with your dog if you move to a different neighborhood/province/country?",
       "element": "textarea",
-      "key": "plans_for_dog_when_moving"
+      "key": "plans_for_dog_when_moving",
+      "required": false
     },
     {
       "id": 31,
       "question": "If you rent and move, and your new home doesn't accept dogs, what would you do?",
       "element": "textarea",
-      "key": "plans_for_dog_when_moving_to_non_dog_friendly_place"
+      "key": "plans_for_dog_when_moving_to_non_dog_friendly_place",
+      "required": false
     },
     {
       "id": 32,
       "question": "If you adopt a puppy, do you agree to neuter/spay it at 6 months? Do you accept follow-up? Do you know what it entails?",
       "element": "radio",
-      "key": "puppy_neutering_spaying_agreement"
+      "key": "puppy_neutering_spaying_agreement",
+      "required": false
     },
     {
       "id": 33,
       "question": "If you are single and in the future you form a couple, what would happen to the pet if that person doesn't like dogs?",
       "element": "textarea",
-      "key": "plans_if_future_partner_dislikes_dogs"
+      "key": "plans_if_future_partner_dislikes_dogs",
+      "required": false
     },
     {
       "id": 34,
       "question": "If you don't have human children, but you want to have them someday, have you thought about how you would handle your dog in the case of a baby's birth?",
       "element": "textarea",
-      "key": "plans_for_dog_when_having_children"
+      "key": "plans_for_dog_when_having_children",
+      "required": false
     },
     {
       "id": 35,
       "question": "Is this your first approach to a shelter for adoption?",
       "element": "radio",
-      "key": "first_approach_to_shelter"
+      "key": "first_approach_to_shelter",
+      "required": false
     },
     {
       "id": 36,
       "question": "Do you adopt by personal decision or has someone requested it? Who requested it?",
       "element": "textarea",
-      "key": "reason_for_adoption"
+      "key": "reason_for_adoption",
+      "required": false
     },
     {
       "id": 37,
       "question": "Are all those who live in the house in agreement with this decision?",
       "element": "radio",
-      "key": "household_agreement_on_adoption"
+      "key": "household_agreement_on_adoption",
+      "required": false
     },
     {
       "id": 38,
       "question": "In case you have chosen an animal and it is adopted by another family, but you are interested in adopting another one, answer the following question and we will consider it for future rescues. What sex, temperament, and size (detail weight limit) of dog are you interested in?",
       "element": "textarea",
-      "key": "preferences_for_next_adoption"
+      "key": "preferences_for_next_adoption",
+      "required": false
     },
     {
       "id": 39,
       "question": "Are you willing to send photos of the perimeter of the house, terrace, balcony, and your current pets?",
       "element": "radio",
-      "key": "willingness_to_send_photos"
+      "key": "willingness_to_send_photos",
+      "required": false
     },
     {
       "id": 40,
       "question": "For consideration: Would you collaborate with some of the expenses generated by your potential adoptee? For example, vaccine in puppies (today $2000, quintuple or sextuple), neutering in adults (today $4000), and if transportation is required, a donation of what you can afford (we are from Zárate). Could you cover these expenses? We do everything from the heart, we have a great need, and we value the help you can give us.",
       "element": "radio",
-      "key": "willingness_to_collaborate_on_expenses"
+      "key": "willingness_to_collaborate_on_expenses",
+      "required": false
     },
     {
       "id": 41,
       "question": "Any additional comments to add?",
       "element": "textarea",
-      "key": "additional_comments"
+      "key": "additional_comments",
+      "required": false
     }
   ]
 }

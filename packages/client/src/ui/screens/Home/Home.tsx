@@ -14,9 +14,6 @@ function HomeScreen() {
           md: '5',
           lg: '7',
         }}
-        style={{
-          overflow: 'scroll',
-        }}
       >
         <Text align="center" weight="medium">
           Dashboard
