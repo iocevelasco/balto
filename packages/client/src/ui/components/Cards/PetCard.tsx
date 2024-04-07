@@ -1,5 +1,5 @@
-import { Card, Text, Box, Inset, Strong, Flex } from '@radix-ui/themes'
-import { Button } from 'src/ui/design-system/Button/Button'
+import { Card, Text, Box, Inset, Flex } from '@radix-ui/themes'
+import { Button } from 'src/ui/design-system/Button'
 import type { Pet } from 'src/utils/types/pet'
 
 interface BaseCardProps {
@@ -11,17 +11,17 @@ interface BaseCardProps {
 const BaseCard = (props: BaseCardProps) => {
   return (
     <Box>
-      <Card size="2" className="hover:bg-yellow-100 hover:drop-shadow-lg border-transparent">
-        <Flex gap="1" direction="column">
-          <Inset clip="padding-box" side="top" pb="current">
-            {props.thumbnail || <Box></Box>}
-          </Inset>
-          {props.children}
-          <Button size="3" m="2" onClick={props.onClick}>
-            Adopt
-          </Button>
-        </Flex>
-      </Card>
+      <button onClick={props.onClick}>
+        <Card size="2" className="hover:bg-yellow-100 hover:drop-shadow-lg border-transparent">
+          <Flex gap="1" direction="column">
+            <Inset clip="padding-box" className="h-96" side="top" pb="current">
+              {props.thumbnail || <Box></Box>}
+            </Inset>
+            {props.children}
+            <Button className="mt-4">Adopt</Button>
+          </Flex>
+        </Card>
+      </button>
     </Box>
   )
 }
@@ -36,11 +36,11 @@ const PetCard = (props: PetCardProps) => {
     <img
       src={props.petDetails.image}
       alt={props.petDetails.name}
+      className="object-cover h-full"
       style={{
         display: 'block',
         objectFit: 'cover',
         width: '100%',
-        height: 140,
         backgroundColor: 'var(--gray-5)',
       }}
     />
@@ -48,8 +48,10 @@ const PetCard = (props: PetCardProps) => {
 
   return (
     <BaseCard thumbnail={image} onClick={props.onClick}>
-      <Flex gap="1" direction="column">
-        <Strong>{props.petDetails.name}</Strong>
+      <Flex direction="column">
+        <Text weight="medium" size="6">
+          {props.petDetails.name}
+        </Text>
         <Flex gap="2">
           <Text>{props.petDetails.sex},</Text>
           <Text>Age {props.petDetails.age}</Text>

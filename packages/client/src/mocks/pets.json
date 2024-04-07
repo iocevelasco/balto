@@ -1,7 +1,7 @@
 {
   "pets": [
     {
-      "id": 1,
+      "id": 123456,
       "name": "Fluffy",
       "species": "Dog",
       "breed": "Golden Retriever",
@@ -9,7 +9,7 @@
       "color": "Golden",
       "sex": "Male",
       "location": "New York",
-      "image": "https://example.com/fluffy_image.jpg"
+      "image": "https://cmsphoto.ww-cdn.com/superstatic/528641/art/default/13123810-30393538.jpg?v=1638241454"
     },
     {
       "id": 2,
@@ -20,7 +20,7 @@
       "color": "Cream",
       "sex": "Female",
       "location": "Los Angeles",
-      "image": "https://example.com/whiskers_image.jpg"
+      "image": "https://cmsphoto.ww-cdn.com/superstatic/528641/art/default/64703245-47830929.jpg?v=1664763403"
     },
     {
       "id": 3,
@@ -31,7 +31,7 @@
       "color": "Black and Tan",
       "sex": "Male",
       "location": "Chicago",
-      "image": "https://example.com/max_image.jpg"
+      "image": "https://cmsphoto.ww-cdn.com/superstatic/528641/art/default/69204530-48467142.jpg?v=1669685500"
     },
     {
       "id": 4,
@@ -42,7 +42,7 @@
       "color": "White",
       "sex": "Female",
       "location": "Houston",
-      "image": "https://example.com/bella_image.jpg"
+      "image": "https://cmsphoto.ww-cdn.com/superstatic/528641/art/default/10503002-17244080.jpg?v=1478033334"
     },
     {
       "id": 5,
@@ -53,7 +53,7 @@
       "color": "Brindle",
       "sex": "Male",
       "location": "Philadelphia",
-      "image": "https://example.com/rocky_image.jpg"
+      "image": "https://cmsphoto.ww-cdn.com/superstatic/528641/art/default/10511995-17261463.jpg?v=1478133498"
     },
     {
       "id": 6,
@@ -64,7 +64,7 @@
       "color": "Black and White",
       "sex": "Male",
       "location": "Phoenix",
-      "image": "https://example.com/oreo_image.jpg"
+      "image": "https://cmsphoto.ww-cdn.com/superstatic/528641/art/default/10554536-17347520.jpg?v=1478731255"
     },
     {
       "id": 7,
@@ -75,40 +75,7 @@
       "color": "Multicolored",
       "sex": "Male",
       "location": "San Antonio",
-      "image": "https://example.com/charlie_image.jpg"
-    },
-    {
-      "id": 8,
-      "name": "Simba",
-      "species": "Hamster",
-      "breed": "Syrian Hamster",
-      "age": 1,
-      "color": "Golden",
-      "sex": "Male",
-      "location": "San Diego",
-      "image": "https://example.com/simba_image.jpg"
-    },
-    {
-      "id": 9,
-      "name": "Luna",
-      "species": "Dog",
-      "breed": "Labrador Retriever",
-      "age": 6,
-      "color": "Black",
-      "sex": "Female",
-      "location": "Dallas",
-      "image": "https://example.com/luna_image.jpg"
-    },
-    {
-      "id": 10,
-      "name": "Snowball",
-      "species": "Rabbit",
-      "breed": "Holland Lop",
-      "age": 3,
-      "color": "White",
-      "sex": "Female",
-      "location": "San Jose",
-      "image": "https://example.com/snowball_image.jpg"
+      "image": "https://cmsphoto.ww-cdn.com/superstatic/528641/art/default/59544744-43736972.jpg?v=1634226080"
     }
   ]
 }
