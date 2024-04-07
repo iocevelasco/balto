@@ -12,10 +12,15 @@ const PetList = () => {
         columns={{
           initial: '1',
           sm: '3',
-          md: '5',
-          xl: '7',
+          md: '4',
+          xl: '5',
         }}
-        gap="3"
+        gap={{
+          initial: '1',
+          sm: '2',
+          md: '4',
+          lg: '4',
+        }}
         rows="repeat(2, 1fr)"
       >
         {pets.map((pet) => (

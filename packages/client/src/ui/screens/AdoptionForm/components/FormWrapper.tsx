@@ -1,7 +1,7 @@
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useForm, Controller, Resolver, SubmitHandler } from 'react-hook-form'
 import { Flex, RadioGroup } from '@radix-ui/themes'
-import { Input } from 'src/ui/components/Input'
+import { Input } from 'src/ui/design-system/Input'
 import { schema } from '../AdoptionForm.utils'
 import type { FormDataType } from '../AdoptionForm.utils'
 import quizList from 'src/mocks/adoption-form-question.json'

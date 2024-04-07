@@ -1,4 +1,3 @@
-import React from 'react'
 import { FormWrapper } from './components/FormWrapper'
 import { UnauthenticatedApp } from 'src/ui/layouts/UnauthenticatedApp'
 import { Container, Flex, Text } from '@radix-ui/themes'
