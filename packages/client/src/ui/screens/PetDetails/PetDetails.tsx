@@ -23,7 +23,12 @@ const PetDetails = () => {
     }, 500)
   }, [])
 
-  const onRedirectToForm = () => navigate(`/${APP_BASE_ROUTES.adoptionForm}`)
+  const onRedirectToForm = () =>
+    navigate(`/${APP_BASE_ROUTES.adoptionForm}`, {
+      state: {
+        petId: petId,
+      },
+    })
 
   return (
     <UnauthenticatedApp isLoading={isLoading}>

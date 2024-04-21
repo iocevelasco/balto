@@ -5721,7 +5721,7 @@ __metadata:
     framer-motion: "npm:^11.0.24"
     graphql: "npm:^16.8.1"
     graphql-tag: "npm:^2.12.6"
-    lucide-react: "npm:^0.364.0"
+    lucide-react: "npm:^0.372.0"
     path: "npm:^0.12.7"
     postcss: "npm:^8.4.38"
     prettier: "npm:2.7.1"
@@ -8251,12 +8251,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lucide-react@npm:^0.364.0":
-  version: 0.364.0
-  resolution: "lucide-react@npm:0.364.0"
+"lucide-react@npm:^0.372.0":
+  version: 0.372.0
+  resolution: "lucide-react@npm:0.372.0"
   peerDependencies:
     react: ^16.5.1 || ^17.0.0 || ^18.0.0
-  checksum: 10c0/07e519f700081f6d9f063dc39d9b58da940a976bfc368dd67c272544cfba226b4663eadf1839f41c5014561408200c595ce566b0f07a747e2a69449beb384749
+  checksum: 10c0/44bc56eb8c195adf931d5ace9a6d8e93d1a90384ff79eb8a658d25e72c0f10b50fb3c6c4bdd7063a3fb61b096b64607be6827315508b8b33616bd1c140a8fa21
   languageName: node
   linkType: hard
 

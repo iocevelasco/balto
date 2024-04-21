@@ -1,5 +1,5 @@
 import { Card, Text, Box, Inset, Flex } from '@radix-ui/themes'
-import { HomeModernIcon, MapPinIcon } from '@heroicons/react/24/solid'
+import { MapPinIcon } from '@heroicons/react/24/solid'
 import { Button } from 'src/ui/design-system/Button'
 import type { Pet } from 'src/utils/types/pet'
 
