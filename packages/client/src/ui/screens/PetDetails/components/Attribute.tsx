@@ -28,11 +28,24 @@ const Attribute = (props: AttributeProps) => {
   return (
     <Flex className="justify-between border-b-2 pb-2" gap="1">
       {props.icon && <Box className="invisible rounded-lg overflow-hidden"> {props.icon} </Box>}
-      <Text size="4" weight="bold" className="truncate flex flex-1 capitalize">
+      <Text
+        size={{
+          initial: '2',
+          sm: '4',
+        }}
+        weight="bold"
+        className="sm:truncate flex flex-1 capitalize"
+      >
         {' '}
         {props.label}
       </Text>
-      <Text size="4" className="flex flex-1">
+      <Text
+        size={{
+          initial: '2',
+          sm: '4',
+        }}
+        className="flex flex-1"
+      >
         {' '}
         {renderValue(props.label, props.value)}{' '}
       </Text>

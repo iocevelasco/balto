@@ -1,5 +1,3 @@
-import React from 'react'
-
 interface HeroBannerProps {
   headline: string
   subheadline: string

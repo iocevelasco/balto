@@ -13,7 +13,7 @@ const UnauthenticatedApp = (props: UnauthenticatedAppProps) => {
       <Flex className="bg-yellow-50" direction="column">
         <Flex direction="column" className="min-h-screen">
           <Header />
-          <Box className="bg-layout-background ">
+          <Box className="bg-layout-background">
             {props.isLoading ? <div>Loading...</div> : props.children}
           </Box>
         </Flex>
