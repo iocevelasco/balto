@@ -27,7 +27,13 @@ const PetDetails = () => {
 
   return (
     <UnauthenticatedApp isLoading={isLoading}>
-      <Container size="4" m="5">
+      <Container
+        size="4"
+        m={{
+          initial: '0',
+          sm: '4',
+        }}
+      >
         <Flex
           direction={{
             initial: 'column',
@@ -38,7 +44,15 @@ const PetDetails = () => {
           gap="4"
         >
           <Button onClick={goBack}>Go back</Button>
-          <Flex align="start" className="h-full" gap="4">
+          <Flex
+            align="start"
+            className="h-full"
+            gap="4"
+            direction={{
+              initial: 'column',
+              sm: 'row',
+            }}
+          >
             <ImageContainer src={pet.image} alt={pet.name} />
             <Box className="bg-white p-8 rounded-lg">
               <Flex direction="column" gap="2">

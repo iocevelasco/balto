@@ -1,6 +1,6 @@
 import { FormWrapper } from './components/FormWrapper'
 import { UnauthenticatedApp } from 'src/ui/layouts/UnauthenticatedApp'
-import { Container, Flex, Text } from '@radix-ui/themes'
+import { Box, Container, Flex, Text } from '@radix-ui/themes'
 
 const AdoptionForm = () => {
   return (
@@ -8,7 +8,9 @@ const AdoptionForm = () => {
       <Container size="3">
         <Flex direction="column" m="8" gap="3">
           <Text size="8">Adoption Form</Text>
-          <FormWrapper />
+          <Box className="bg-white p-8 rounded-lg">
+            <FormWrapper />
+          </Box>
         </Flex>
       </Container>
     </UnauthenticatedApp>

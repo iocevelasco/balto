@@ -1,4 +1,5 @@
 import { Card, Text, Box, Inset, Flex } from '@radix-ui/themes'
+import { HomeModernIcon, MapPinIcon } from '@heroicons/react/24/solid'
 import { Button } from 'src/ui/design-system/Button'
 import type { Pet } from 'src/utils/types/pet'
 
@@ -11,7 +12,7 @@ interface BaseCardProps {
 const BaseCard = (props: BaseCardProps) => {
   return (
     <Box>
-      <button onClick={props.onClick}>
+      <button type="button" className="w-full" onClick={props.onClick}>
         <Card size="2" className="hover:bg-yellow-100 hover:drop-shadow-lg border-transparent">
           <Flex gap="1" direction="column">
             <Inset clip="padding-box" className="h-96" side="top" pb="current">
@@ -56,7 +57,10 @@ const PetCard = (props: PetCardProps) => {
           <Text>{props.petDetails.sex},</Text>
           <Text>Age {props.petDetails.age}</Text>
         </Flex>
-        <Text>{props.petDetails.location}</Text>
+        <Flex gap="2">
+          <MapPinIcon className="w-4 text-orange-400" />
+          <Text>{props.petDetails.location}</Text>
+        </Flex>
       </Flex>
     </BaseCard>
   )

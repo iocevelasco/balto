@@ -1,57 +1,61 @@
-import { yupResolver } from '@hookform/resolvers/yup'
-import { useForm, Controller, Resolver, SubmitHandler } from 'react-hook-form'
-import { Flex, RadioGroup } from '@radix-ui/themes'
-import { Input } from 'src/ui/design-system/Input'
-import { schema } from '../AdoptionForm.utils'
-import type { FormDataType } from '../AdoptionForm.utils'
-import quizList from 'src/mocks/adoption-form-question.json'
+'use client'
 
-const FormWrapper = () => {
-  const { handleSubmit, control, formState } = useForm<FormDataType>({
-    resolver: yupResolver<Resolver<FormDataType, any>>(schema),
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useForm } from 'react-hook-form'
+import { z } from 'zod'
+import { Button } from 'src/ui/design-system/Button'
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from 'src/ui/components/Form'
+import { Input } from 'src/ui/design-system/Input'
+import { RadioGroup, RadioGroupItem } from 'src/ui/design-system/RadioGroup'
+import { FormSchema, defaultFormData, formData } from '../AdoptionForm.utils'
+
+function FormWrapper() {
+  const form = useForm<z.infer<typeof FormSchema>>({
+    resolver: zodResolver(FormSchema),
+    defaultValues: defaultFormData,
   })
 
-  const onSubmit: SubmitHandler<FormDataType> = (data) => console.log(data)
+  function onSubmit(data: z.infer<typeof FormSchema>) {
+    console.log(`data`, data)
+  }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <Flex direction="column" gap="3">
-        {quizList.questions.map((question) => (
-          <div key={question.id} className="question">
-            {question.element === 'radio' ? (
-              <Controller
-                control={control}
-                name={question.key}
-                render={({ field }) => (
-                  <RadioGroup.Root {...field} defaultValue="no">
-                    <RadioGroup.Item value="yes">Yes</RadioGroup.Item>
-                    <RadioGroup.Item value="no">No</RadioGroup.Item>
-                  </RadioGroup.Root>
-                )}
-              />
-            ) : (
-              <Controller
-                control={control}
-                name={question.key}
-                render={({ field }) => {
-                  return (
-                    <Input
-                      label={question.question}
-                      id={question.key}
-                      type={question.element}
-                      formState={formState}
-                      required={question.required}
-                      {...field}
-                    />
-                  )
-                }}
-              />
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="w-100 space-y-6">
+        {formData.inputs.map((input, index) => (
+          <FormField
+            key={index}
+            control={form.control}
+            name={input.key}
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>{input.label}</FormLabel>
+                <FormControl>
+                  {input.inputType === 'radio' ? (
+                    <RadioGroup {...field}>
+                      <RadioGroupItem value="yes">Yes</RadioGroupItem>
+                      <RadioGroupItem value="no">No</RadioGroupItem>
+                    </RadioGroup>
+                  ) : (
+                    <Input type={input.inputType} {...field} value={field.value} />
+                  )}
+                </FormControl>
+                <FormMessage />
+              </FormItem>
             )}
-          </div>
+          />
         ))}
-        <button type="submit">Submit</button>
-      </Flex>
-    </form>
+        <Button type="submit">Submit</Button>
+      </form>
+    </Form>
   )
 }
 

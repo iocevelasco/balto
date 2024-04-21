@@ -17,6 +17,7 @@ const StyledItem = styled('li', {
   flexDirection: 'row',
   justifyContent: 'center',
   minHeight: '$12',
+  gap: '$xsmall',
   padding: '$xxsmall',
   textAlign: 'center',
   variants: {
@@ -35,9 +36,7 @@ const StyledItem = styled('li', {
 function NavigationButton(props: NavbarButtonProps) {
   return (
     <StyledItem active={props.active} as={Link} to={props.url}>
-      <MenuIcon size="small" label={props.name}>
-        {props.icon}
-      </MenuIcon>
+      <MenuIcon>{props.icon}</MenuIcon>
       <Text
         css={{
           fontSize: 'x-small',

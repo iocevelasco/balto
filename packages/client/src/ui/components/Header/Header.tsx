@@ -1,4 +1,4 @@
-import { ChevronLeftIcon } from '@heroicons/react/24/solid'
+import { HomeModernIcon } from '@heroicons/react/24/solid'
 import { ReactComponent as Brand } from 'src/assets/brand/brand-white.svg'
 import { Navigation, type NavigationProps } from '../Navigation'
 import { APP_BASE_ROUTES } from 'src/App'
@@ -11,15 +11,9 @@ function Header() {
   const tabs: NavigationProps['tabs'] = [
     {
       active: !!matchPath(APP_BASE_ROUTES.home, location.pathname),
-      icon: <ChevronLeftIcon />,
+      icon: <HomeModernIcon />,
       name: 'home',
       url: '/',
-    },
-    {
-      active: !!matchPath(APP_BASE_ROUTES.adoptionForm, location.pathname),
-      icon: <ChevronLeftIcon />,
-      name: 'form',
-      url: '/form',
     },
   ]
 

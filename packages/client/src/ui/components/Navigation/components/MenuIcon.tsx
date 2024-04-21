@@ -1,8 +1,9 @@
-import { Flex } from '@radix-ui/themes'
+import { Box, Flex } from '@radix-ui/themes'
 import { styled } from 'src/config/stitches'
 
 type MenuIconProps = {
   notifications?: JSX.Element
+  children: JSX.Element
 }
 
 const NotificationBadgeWrapper = styled('div', {
@@ -20,7 +21,7 @@ function MenuIcon(props: MenuIconProps) {
       </Flex>
     )
   }
-  return <p>icon</p>
+  return <Box width="5">{props.children}</Box>
 }
 
 export type { MenuIconProps }
