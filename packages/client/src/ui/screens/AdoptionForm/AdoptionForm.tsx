@@ -1,13 +1,9 @@
 import { FormWrapper } from './components/FormWrapper'
 import { UnauthenticatedApp } from 'src/ui/layouts/UnauthenticatedApp'
 import { Box, Container, Flex, Text } from '@radix-ui/themes'
-import { useLocation } from 'react-router-dom'
 import { PetDetail } from './components/PetDetail'
-import mocks from 'src/mocks/pet-detail.json'
 
 const AdoptionForm = () => {
-  const location = useLocation()
-  console.log({ location })
   return (
     <UnauthenticatedApp>
       <Container size="3">
