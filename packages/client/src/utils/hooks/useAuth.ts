@@ -24,8 +24,7 @@ export const useAuth = () => {
       login: async () => {
         try {
           await signInWithPopup(auth, googleAuthProvider).then(() => { 
-            dispatch(userAuth(true))
-            dispatch(userLoadData({
+            dispatch(userAuth({
               isAuth: true,
               name: auth.currentUser?.displayName,
               email: auth.currentUser?.email,
@@ -44,7 +43,14 @@ export const useAuth = () => {
       logout: async () => {
           try {
             await signOut(auth).then(() => { 
-              dispatch(userAuth(false))
+              dispatch(userAuth({
+                isAuth: false,
+                name: null,
+                email: null,
+                photoURL: null,
+                uid: null,
+                token: null,
+              }))
             })
           } catch (error) {
             console.error(error)

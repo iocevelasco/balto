@@ -6,9 +6,12 @@ import { matchPath, useNavigate } from 'react-router-dom'
 import { Avatar } from '../Avatar/Avatar'
 import { Box, Button, Container, Flex } from '@radix-ui/themes'
 import { useAuth } from 'src/utils/hooks/useAuth'
+import { useAppSelector } from 'src/config/store'
+import { selectUser } from 'src/config/store/slices'
 
 function Header() {
   const [authState, actions] = useAuth()
+  const userProps = useAppSelector(selectUser)
   const navigate = useNavigate()
   const tabs: NavigationProps['tabs'] = [
     {
@@ -19,7 +22,6 @@ function Header() {
     },
   ]
 
-  console.log(authState)
   const onRedirectToForm = () => navigate('/')
 
   return (
@@ -34,7 +36,9 @@ function Header() {
           <Navigation tabs={tabs} />
           {!authState && <Button onClick={actions.login}>Sign up</Button>}
           {authState && <Button onClick={actions.logout}>Log auth</Button>}
-          <Avatar />
+          <Flex display="flex" justify="between" align="center">
+            <Avatar src={userProps?.photoURL || ''} />
+          </Flex>
         </Box>
       </Container>
     </Flex>

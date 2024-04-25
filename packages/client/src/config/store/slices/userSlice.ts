@@ -18,12 +18,9 @@ const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
-    userAuth(state, action: PayloadAction<boolean>) {
-      state.isAuth = action.payload
-    },
-    userLoadData(state, action: PayloadAction<UserData>) { 
+    userAuth(_, action: PayloadAction<UserData>) {
       return {
-        ...state,
+        isAuth: action.payload.isAuth,
         name: action.payload.name,
         email: action.payload.email,
         photoURL: action.payload.photoURL,
@@ -34,7 +31,7 @@ const userSlice = createSlice({
   },
 })
 
-export const { userAuth, userLoadData } = userSlice.actions
+export const { userAuth } = userSlice.actions
 
 export const selectUser = (state: RootState) => state.user
 export const selectIsAuth = (state: RootState) => state.user.isAuth
