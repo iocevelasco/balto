@@ -10,8 +10,8 @@ const persistConfig = {
   key: 'root',
   version: 1,
   storage,
-  blacklist: ['navBar', 'user'], // reducers that should not be persisted
-  whitelist: ['accountDetails'], // reducers that will be persisted
+  blacklist: ['navBar'], // reducers that should not be persisted
+  whitelist: ['user'], // reducers that will be persisted
 }
 
 const rootReducer = combineReducers({

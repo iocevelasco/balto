@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import { googleAuthProvider, auth } from 'src/config/firebase/firebase'
 import { signInWithPopup, signOut } from 'firebase/auth'
 import { useAppDispatch, useAppSelector } from 'src/config/store'
-import { selectIsAuth, userAuth } from 'src/config/store/slices/userSlice'
+import { selectIsAuth, userAuth, userLoadData } from 'src/config/store/slices/userSlice'
 import { APP_BASE_ROUTES } from 'src/App'
 
 export const OriginPathnameKey = 'originPathname'
@@ -25,6 +25,14 @@ export const useAuth = () => {
         try {
           await signInWithPopup(auth, googleAuthProvider).then(() => { 
             dispatch(userAuth(true))
+            dispatch(userLoadData({
+              isAuth: true,
+              name: auth.currentUser?.displayName,
+              email: auth.currentUser?.email,
+              photoURL: auth.currentUser?.photoURL,
+              uid: auth.currentUser?.uid,
+              token: auth.currentUser?.refreshToken,
+            }))
           })
         } catch (error) {
           console.error(error)
