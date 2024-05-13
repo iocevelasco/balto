@@ -2,6 +2,7 @@ import { UnauthenticatedApp } from 'src/ui/layouts/UnauthenticatedApp'
 import { PetList } from './components/PetsList'
 import { Flex, Text } from '@radix-ui/themes'
 import { HeroBanner } from 'src/ui/components/HeroBanner'
+import { SheltersList } from './components/SheltersList'
 
 function HomeScreen() {
   return (
@@ -22,6 +23,18 @@ function HomeScreen() {
         }}
       >
         <PetList />
+      </Flex>
+      <Flex
+        direction="column"
+        gap="3"
+        width="100%"
+        p={{
+          initial: '3',
+          md: '5',
+          lg: '7',
+        }}
+      >
+        <SheltersList />
       </Flex>
     </UnauthenticatedApp>
   )

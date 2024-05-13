@@ -1,0 +1,37 @@
+{
+  "shelters": [
+    {
+      "id": 1,
+      "name": "Paws of Love Shelter",
+      "description": "Paws of Love Shelter is dedicated to rescuing and rehoming abandoned and neglected pets. Our mission is to provide compassionate care and find loving homes for all animals in need.",
+      "information": {
+        "email": "info@pawsoflove.org",
+        "phone": "+54 9 11 1234-5678",
+        "address": "Av. Corrientes 1234, Buenos Aires, Argentina"
+      },
+      "image": "pawsoflove.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Whisker Haven Rescue",
+      "description": "Whisker Haven Rescue is committed to saving cats and kittens from high-kill shelters and dangerous situations. We provide medical care, spaying/neutering, and find loving homes for our feline friends.",
+      "information": {
+        "email": "rescue@whiskerhaven.org",
+        "phone": "+54 9 11 8765-4321",
+        "address": "Calle San Martín 567, Córdoba, Argentina"
+      },
+      "image": "whiskerhaven.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Happy Tails Sanctuary",
+      "description": "Happy Tails Sanctuary provides a safe haven for senior and special needs dogs. Our sanctuary offers comfort, medical care, and a forever home for dogs who have been abandoned or are facing euthanasia.",
+      "information": {
+        "email": "sanctuary@happytails.org",
+        "phone": "+54 9 11 2345-6789",
+        "address": "Av. Belgrano 789, Rosario, Argentina"
+      },
+      "image": "happytails.jpg"
+    }
+  ]
+}

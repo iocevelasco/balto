@@ -7,6 +7,7 @@ interface BaseCardProps {
   onClick: () => void
   children?: React.ReactNode | React.ReactNode[]
   thumbnail?: React.ReactNode
+  link: boolean
 }
 
 const BaseCard = (props: BaseCardProps) => {
