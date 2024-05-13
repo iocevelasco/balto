@@ -24,7 +24,7 @@ const PetList = () => {
         rows="repeat(2, 1fr)"
       >
         {pets.map((pet) => (
-          <PetCardContainer petDetails={pet} />
+          <PetCardContainer key={pet.id} petDetails={pet} />
         ))}
       </Grid>
     </Container>

@@ -70,7 +70,7 @@ module.exports = {
       },
       backgroundImage: {
         "layout-background": "url('./src/assets/background/paw-bg.png')",
-      }
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

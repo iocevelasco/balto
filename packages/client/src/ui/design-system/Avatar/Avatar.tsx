@@ -14,7 +14,7 @@ type AvatarProps = {
   src: string
 }
 
-const Avatar = ({ variant = Variant.Circle, isOnline, src }: AvatarProps) => {
+const Avatar = ({ variant = Variant.Circle, src }: AvatarProps) => {
   return (
     <Fragment>
       <AvatarPrimitive.Root className="relative inline-flex h-10 w-10">

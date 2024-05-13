@@ -1,0 +1,36 @@
+{
+  "lives": [
+    {
+      "id": "SEASON",
+      "live": true,
+      "status": "WINDOW_TWO"
+    },
+    {
+      "id": "EDIT",
+      "live": true,
+      "status": "WINDOW_TWO"
+    }
+  ],
+  "user": {
+    "userId": 1919195686,
+    "uuid": "79574b61-e1f2-4623-854c-dbd39223b7ba",
+    "subscriptionState": "ACTIVE",
+    "role": "CUSTOMER",
+    "tier": "SILVER",
+    "subscriptionType": "SEASONAL",
+    "planCode": "fffvip",
+    "firstName": "ioce",
+    "lastName": "velasco",
+    "shippingCountry": "CA",
+    "shippingZipCode": "90201",
+    "shippingState": "CA",
+    "shippingCity": "BELL",
+    "email": "ioce.velasco-contractor21@fabfitfun.com",
+    "subscriptionStartDate": 1714678105000,
+    "subscriptionEndDate": 1722626905000
+  },
+  "avatar": "https://avatars.discourse.org/v4/letter/i/9de0a6/360.png",
+  "seasonCode": "Q-2402",
+  "errors": {},
+  "loggedIn": true
+}

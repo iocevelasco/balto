@@ -1,6 +1,6 @@
 import { FormWrapper } from './components/FormWrapper'
 import { UnauthenticatedApp } from 'src/ui/layouts/UnauthenticatedApp'
-import { Box, Container, Flex, Text } from '@radix-ui/themes'
+import { Box, Container, Flex } from '@radix-ui/themes'
 import { PetDetail } from './components/PetDetail'
 
 const AdoptionForm = () => {
