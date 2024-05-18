@@ -1,4 +1,5 @@
 export interface ShelterType {
+  _id?: string;
   id?: string;
   name: string;
   description: string;
