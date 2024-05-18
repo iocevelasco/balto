@@ -1,7 +1,10 @@
-import express, { Request, Response, NextFunction } from 'express';
+import express, { Request, Response } from 'express';
 import cookieParser from 'cookie-parser';
-import { admin } from './config/firebase';
 import config from './config/commons';
+import connect from './config/db';
+
+import auth from './middleware/auth';
+
 import cors from 'cors';
 
 const app = express();
@@ -9,25 +12,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(cookieParser())
+connect(config.dbUrl);
 
-const authenticate = async (req: Request, res: Response, next: NextFunction) => {
-  const idToken = req.headers.authorization && req.headers.authorization.split('Bearer ')[1];
-
-  if (!idToken) {
-    return res.status(401).send('Unauthorized');
-  }
-
-  try {
-    const decodedToken = await admin.auth().verifyIdToken(idToken);
-    (req as any).user = decodedToken;
-    next();
-  } catch (error) {
-    console.error('Error verifying ID token:', error);
-    return res.status(401).send('Unauthorized');
-  }
-};
-
-app.use('/api', authenticate);
+app.use('/api', auth);
 
 app.get('/api/protected', (req: Request, res: Response) => {
   const user = (req as any).user;
@@ -39,7 +26,7 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 app.listen(config.port, () =>
-  console.log(`Server is live @ ${config.hostUrl}`),
+  console.log(`Server is live @ ${config.host}`),
 );
 
 
