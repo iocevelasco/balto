@@ -1,11 +1,12 @@
 import admin from "firebase-admin";
 import config from "../commons";
-import fs from 'fs';
 
-const pepe = fs.writeFileSync('serviceAccountKey.json', JSON.stringify(config.serviceAccount, null, 2));
-console.log({pepe})
 admin.initializeApp({
-  credential: admin.credential.cert(pepe as any)
+  credential: admin.credential.cert({
+    projectId: config.serviceAccount.project_id,
+    clientEmail: config.serviceAccount.client_email,
+    privateKey: config.serviceAccount.private_key,
+  })
 });
 
 export { admin };
