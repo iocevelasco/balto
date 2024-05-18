@@ -1,12 +1,10 @@
 {
   "name": "patitas",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "packages/*",
-    "packages/server/*"
+    "packages/*"
   ],
   "engines": {
     "node": "^18.16.0"
@@ -14,7 +12,8 @@
   "scripts": {
     "main": "yarn packages client dev",
     "dev:client": "yarn workspace client dev",
-    "build:client": "yarn workspace client build"
+    "build:client": "yarn workspace client build",
+    "dev:server": "yarn workspace server start"
   },
   "devDependencies": {
     "typescript": "^5.3.3",
