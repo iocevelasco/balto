@@ -3,6 +3,8 @@ import cookieParser from 'cookie-parser';
 import config from './config/commons';
 import connect from './config/db';
 import routes from './config/routes';
+import definition from './documentation/swagger';
+import swaggerUi from "swagger-ui-express";
 
 import auth from './middleware/auth';
 
@@ -15,6 +17,14 @@ app.use(express.json());
 app.use(cookieParser())
 connect(config.dbUrl);
 routes(app);
+
+app.use(
+  "/api-docs",
+  swaggerUi.serve,
+  swaggerUi.setup(definition, {
+    swaggerOptions: { defaultModelsExpandDepth: -1 },
+  })
+);
 
 app.use('/api', auth);
 
