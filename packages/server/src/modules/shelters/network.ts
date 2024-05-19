@@ -110,7 +110,7 @@ router.delete("/:id", function (req, res) {
     .then((resp) => {
       switch (resp.status) {
         case 200:
-          res.status(200).send(`Study Plan ${req.params.id} deleted`);
+          res.status(200).send(`Shelter ${req.params.id} deleted`);
           break;
         case 400:
           res.status(resp.status).send(resp.message);

@@ -2,6 +2,7 @@ import express, { Request, Response } from 'express';
 import cookieParser from 'cookie-parser';
 import config from './config/commons';
 import connect from './config/db';
+import routes from './config/routes';
 
 import auth from './middleware/auth';
 
@@ -13,6 +14,7 @@ app.use(cors());
 app.use(express.json());
 app.use(cookieParser())
 connect(config.dbUrl);
+routes(app);
 
 app.use('/api', auth);
 
@@ -26,7 +28,7 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 app.listen(config.port, () =>
-  console.log(`Server is live @ ${config.host}`),
+  console.log(`Server is live @ ${config.host}:${config.port}`),
 );
 
 

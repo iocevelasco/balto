@@ -2,7 +2,8 @@ const handleDuplicateKeyError = (err: any, res: any) => {
   const field = Object.keys(err.keyValue);
   const code = 400;
   let errors = {};
-  errors[field] = `An account with that ${field} already exists.`;
+  // errors[field] = `An account with that ${field} already exists.`;
+  errors = `An account with that ${field} already exists.`;
   res.status(code).send(errors);
 };
 
@@ -11,7 +12,8 @@ const handleValidationError = (err: any, res: any) => {
   let errors = {};
 
   Object.keys(err.errors).forEach((key) => {
-    errors[key] = err.errors[key].message;
+    // errors[key] = err.errors[key].message;
+    errors = err.errors[key].message;
   });
 
   res.status(400).send(errors);
