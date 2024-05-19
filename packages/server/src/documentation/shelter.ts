@@ -313,11 +313,7 @@ const definitions = {
       _id: { type: "string", format: "uuid" },
       name: { type: "string" }
     },
-  },
-  ListArraySimple: {
-    type: "array",
-    $ref: "#/definitions/ListSimple",
-  },
+  }
 };
 
 export default {

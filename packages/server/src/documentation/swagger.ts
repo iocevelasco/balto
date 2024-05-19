@@ -42,7 +42,6 @@ const definition = {
     NewShelter: shelter.definitions.NewShelter,
     UpdateShelter: shelter.definitions.UpdateShelter,
     ListSimple: shelter.definitions.ListSimple,
-    ListArraySimple: shelter.definitions.ListArraySimple,
   },
 };
 
