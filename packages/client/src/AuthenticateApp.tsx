@@ -41,7 +41,7 @@ const PublicApp = () => {
   )
 }
 
-const PrivateApp = () => {
+const AuthenticateApp = () => {
   const contextValue = React.useContext(RouteContext)
   return (
     <React.Suspense fallback={'...loading'}>

@@ -40,6 +40,9 @@ const UserDrawer = () => {
             <Text>{userProps.name}</Text>
             <Text>{userProps.email}</Text>
           </Flex>
+          <Flex direction="column" justify="center" gap="4">
+            <Button className="flex gap-3">Signed as shelter</Button>
+          </Flex>
         </Box>
         <DrawerFooter>
           <DrawerClose asChild>
