@@ -78,7 +78,6 @@ const PetDetails = () => {
                 <Attribute label="Shelter" value={pet.rescueOrganization} />
                 <Attribute label="contact Information" value={pet.contactInformation} />
                 <Attribute label="medical History" value={pet.medicalHistory} />
-
                 <Button onClick={onRedirectToForm}>Start Adoption process</Button>
               </Flex>
             </Box>

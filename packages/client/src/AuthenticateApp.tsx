@@ -41,19 +41,4 @@ const PublicApp = () => {
   )
 }
 
-const AuthenticateApp = () => {
-  const contextValue = React.useContext(RouteContext)
-  return (
-    <React.Suspense fallback={'...loading'}>
-      <RouteContext.Provider value={contextValue}>
-        <Routes>
-          <Route path={APP_BASE_ROUTES.home} element={<HomeScreen />} />
-          <Route path={APP_BASE_ROUTES.adoptionForm} element={<AdoptionForm />} />
-          <Route path={`${APP_BASE_ROUTES.petDetails}/:id`} element={<PetDetail />} />
-        </Routes>
-      </RouteContext.Provider>
-    </React.Suspense>
-  )
-}
-
 export { PublicApp as App, APP_BASE_ROUTES }

@@ -5,7 +5,11 @@ import { UNSAFE_RouteContext as RouteContext } from 'react-router'
 const APP_BASE_ROUTES = {
   home: '/',
   adoptionForm: 'form',
-  petDetails: 'pet',
+  petDetails: {
+    root: 'pet',
+    id: ':id',
+  },
+  shelterForm: 'shelter',
 }
 
 const HomeScreen = React.lazy(() =>
@@ -26,6 +30,12 @@ const PetDetail = React.lazy(() =>
   }))
 )
 
+const ShelterForm = React.lazy(() =>
+  import('./ui/screens/ShelterForm/ShelterForm').then((m) => ({
+    default: m.ShelterForm,
+  }))
+)
+
 const PublicApp = () => {
   const contextValue = React.useContext(RouteContext)
   return (
@@ -34,21 +44,7 @@ const PublicApp = () => {
         <Routes>
           <Route path={APP_BASE_ROUTES.home} element={<HomeScreen />} />
           <Route path={APP_BASE_ROUTES.adoptionForm} element={<AdoptionForm />} />
-          <Route path={`${APP_BASE_ROUTES.petDetails}/:id`} element={<PetDetail />} />
-        </Routes>
-      </RouteContext.Provider>
-    </React.Suspense>
-  )
-}
-
-const PrivateApp = () => {
-  const contextValue = React.useContext(RouteContext)
-  return (
-    <React.Suspense fallback={'...loading'}>
-      <RouteContext.Provider value={contextValue}>
-        <Routes>
-          <Route path={APP_BASE_ROUTES.home} element={<HomeScreen />} />
-          <Route path={APP_BASE_ROUTES.adoptionForm} element={<AdoptionForm />} />
+          <Route path={APP_BASE_ROUTES.shelterForm} element={<ShelterForm />} />
           <Route path={`${APP_BASE_ROUTES.petDetails}/:id`} element={<PetDetail />} />
         </Routes>
       </RouteContext.Provider>

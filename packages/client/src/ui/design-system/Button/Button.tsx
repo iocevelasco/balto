@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Slot } from '@radix-ui/react-slot'
 import { cva, type VariantProps } from 'class-variance-authority'
 import { shadHelper } from 'src/utils/functions/shadHelper'
+import { Box, Flex } from '@radix-ui/themes'
 
 const buttonVariants = cva(
   'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
@@ -51,4 +52,25 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 )
 Button.displayName = 'Button'
 
-export { Button, buttonVariants }
+export interface ButtonWithIconProps extends ButtonProps {
+  icon?: React.ReactNode
+}
+
+const ButtonWithIcon = React.forwardRef<HTMLButtonElement, ButtonWithIconProps>(
+  ({ className, variant = 'rounded', size = 'icon', asChild = false, ...props }, ref) => {
+    return (
+      <Button
+        className={shadHelper(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+      >
+        <Flex gap="3" align="center" justify="between" className="w-full pl-4">
+          {props.children}
+          <Box className="bg-transparent p-2 rounded-full">{props.icon}</Box>
+        </Flex>
+      </Button>
+    )
+  }
+)
+
+export { Button, buttonVariants, ButtonWithIcon }
