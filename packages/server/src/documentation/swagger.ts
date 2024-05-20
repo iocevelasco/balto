@@ -34,7 +34,7 @@ const definition = {
     "/shelters/{id}": shelter.getOne,
     "/shelters/list/{pattern}/{page}": shelter.getAll,
     "/shelters/simple": shelter.getSimple,
-    "/shelters  ": shelter.remove,
+    "/shelters/{id} ": shelter.remove,
   },
   definitions: {
     Shelter: shelter.definitions.Shelter,
