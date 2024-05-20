@@ -6,8 +6,6 @@ import routes from './config/routes';
 import definition from './documentation/swagger';
 import swaggerUi from "swagger-ui-express";
 
-import auth from './middleware/auth';
-
 import cors from 'cors';
 
 const app = express();
@@ -25,13 +23,6 @@ app.use(
     swaggerOptions: { defaultModelsExpandDepth: -1 },
   })
 );
-
-app.use('/api', auth);
-
-app.get('/api/protected', (req: Request, res: Response) => {
-  const user = (req as any).user;
-  res.send(`Hello ${user.name}, you have access to this route!`);
-});
 
 app.get('/', (req: Request, res: Response) => {
   res.send('Hello, world!');
