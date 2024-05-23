@@ -16,7 +16,7 @@ export async function getShelters(filter: string, page: number, simple: boolean)
     if (filter === '' || filter === undefined || !filter) {
       filter = '';
     }
-    let newArray: any = [];
+    let newArray: { id: string | undefined; name: string; }[] = [];
     let result: any = null;
     if (simple) {
       result = await getSimpleShelters();
