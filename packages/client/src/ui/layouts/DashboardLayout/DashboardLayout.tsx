@@ -12,12 +12,12 @@ interface UnauthenticatedAppProps extends ReactNode {
 
 const DashboardLayout = (props: UnauthenticatedAppProps) => {
   const [isAuthenticated, actions] = useAuth()
-  console.log({ isAuthenticated })
+
   useEffect(() => {
     if (!isAuthenticated) {
       actions.logout()
     }
-  }, [])
+  }, [isAuthenticated])
 
   return (
     <>

@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Footer } from 'src/ui/components/Footer'
 import { Header } from 'src/ui/components/Header'
 import { Box, Flex } from '@radix-ui/themes'
@@ -26,5 +25,4 @@ const UnauthenticatedApp = (props: UnauthenticatedAppProps) => {
 }
 
 export type { UnauthenticatedAppProps }
-
 export { UnauthenticatedApp }

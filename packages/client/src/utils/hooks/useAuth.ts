@@ -41,7 +41,7 @@ export const useAuth = () => {
         }
       },
       logout: async () => {
-          try {
+        try {
             await signOut(auth).then(() => { 
               dispatch(userAuth({
                 isAuth: false,
@@ -60,11 +60,6 @@ export const useAuth = () => {
     }),
     [dispatch, navigate, state]
   )
-
-  if (!isAuthenticated) {
-      actions.logout()
-      return [isAuthenticated, actions] as [boolean, typeof actions]
-  }
 
   return [isAuthenticated, actions] as [boolean, typeof actions]
 }
