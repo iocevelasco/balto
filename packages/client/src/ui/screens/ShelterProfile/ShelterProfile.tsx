@@ -1,5 +1,6 @@
 import React from 'react'
+import { DashboardLayout } from 'src/ui/layouts/DashboardLayout'
 
-export default function ShelterProfile() {
-  return <>Profile</>
+export function ShelterProfile() {
+  return <DashboardLayout>Profile</DashboardLayout>
 }

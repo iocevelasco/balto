@@ -4,7 +4,7 @@ import { googleAuthProvider, auth } from 'src/config/firebase/firebase'
 import { signInWithPopup, signOut } from 'firebase/auth'
 import { useAppDispatch, useAppSelector } from 'src/config/store'
 import { selectIsAuth, userAuth } from 'src/config/store/slices/userSlice'
-import { APP_BASE_ROUTES } from 'src/App'
+import { LANDING_ROUTES } from 'src/App'
 
 export const OriginPathnameKey = 'originPathname'
 export type LocationState = {
@@ -15,7 +15,7 @@ export type LocationState = {
 
 export const useAuth = () => {
   const dispatch = useAppDispatch()
-  const authState = useAppSelector(selectIsAuth)
+  const isAuthenticated = useAppSelector(selectIsAuth)
   const { state } = useLocation() as LocationState
   const navigate = useNavigate()
 
@@ -55,13 +55,16 @@ export const useAuth = () => {
           } catch (error) {
             console.error(error)
           }
-        navigate(APP_BASE_ROUTES.home)
+        navigate(LANDING_ROUTES.home)
       },
     }),
     [dispatch, navigate, state]
   )
 
+  if (!isAuthenticated) {
+      actions.logout()
+      return [isAuthenticated, actions] as [boolean, typeof actions]
+  }
 
-
-  return [authState, actions] as [boolean, typeof actions]
+  return [isAuthenticated, actions] as [boolean, typeof actions]
 }
