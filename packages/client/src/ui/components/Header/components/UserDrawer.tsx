@@ -4,6 +4,7 @@ import { useAppSelector } from 'src/config/store'
 import { Avatar } from 'src/ui/design-system/Avatar'
 import { selectUser } from 'src/config/store/slices'
 import { Bars3Icon } from '@heroicons/react/20/solid'
+import { ModalConfirmCreateShelter } from './ModalConfirmCreateShelter'
 import { ExitIcon } from '@radix-ui/react-icons'
 
 import {
@@ -17,6 +18,7 @@ import { useAuth } from 'src/utils/hooks/useAuth'
 
 const UserDrawer = () => {
   const userProps = useAppSelector(selectUser)
+
   const [_, actions] = useAuth()
 
   return (
@@ -39,6 +41,11 @@ const UserDrawer = () => {
             <Avatar src={userProps?.photoURL || ''} />
             <Text>{userProps.name}</Text>
             <Text>{userProps.email}</Text>
+          </Flex>
+          <Flex direction="column" justify="center" gap="4">
+            <ModalConfirmCreateShelter />
+            <Button className="flex gap-3">Signed as shelter</Button>
+            <Button className="flex gap-3">Signed as shelter</Button>
           </Flex>
         </Box>
         <DrawerFooter>

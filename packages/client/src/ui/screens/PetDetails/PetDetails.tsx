@@ -5,14 +5,14 @@ import { Button } from 'src/ui/design-system/Button'
 import { useNavigate } from 'react-router-dom'
 import type { Pet } from 'src/utils/types/pet'
 import { UnauthenticatedApp } from 'src/ui/layouts/UnauthenticatedApp'
-import { APP_BASE_ROUTES } from 'src/App'
+import { LANDING_ROUTES } from 'src/App'
 import { ImageContainer } from './components/ImageContainer'
 import { Attribute } from './components/Attribute'
 import mocks from 'src/mocks/pet-detail.json'
 
 const PetDetails = () => {
   const navigate = useNavigate()
-  const goBack = () => navigate(`${APP_BASE_ROUTES.home}`)
+  const goBack = () => navigate(`${LANDING_ROUTES.home}`)
   const { id: petId } = useParams<{ id: string }>()
   const [isLoading, setIsLoaded] = useState(true)
   const [pet, _] = useState<Pet>(mocks as Pet)
@@ -24,7 +24,7 @@ const PetDetails = () => {
   }, [])
 
   const onRedirectToForm = () =>
-    navigate(`/${APP_BASE_ROUTES.adoptionForm}`, {
+    navigate(`/${LANDING_ROUTES.adoptionForm}`, {
       state: {
         petId: petId,
       },
@@ -78,7 +78,6 @@ const PetDetails = () => {
                 <Attribute label="Shelter" value={pet.rescueOrganization} />
                 <Attribute label="contact Information" value={pet.contactInformation} />
                 <Attribute label="medical History" value={pet.medicalHistory} />
-
                 <Button onClick={onRedirectToForm}>Start Adoption process</Button>
               </Flex>
             </Box>
