@@ -17,7 +17,7 @@ const DashboardLayout = (props: UnauthenticatedAppProps) => {
     if (!isAuthenticated) {
       actions.logout()
     }
-  }, [isAuthenticated])
+  }, [])
 
   return (
     <>

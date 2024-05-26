@@ -13,6 +13,7 @@ const LANDING_ROUTES = {
   adoptionForm: 'form',
   petDetails: 'pet/:id',
   shelterForm: 'shelter',
+  all: '*',
 }
 
 const HomeScreen = React.lazy(() =>
@@ -40,8 +41,14 @@ const ShelterForm = React.lazy(() =>
 )
 
 const ShelterProfile = React.lazy(() =>
-  import('./ui/screens/ShelterProfile').then((m) => ({
+  import('./ui/screens/ShelterProfile/ShelterProfile').then((m) => ({
     default: m.ShelterProfile,
+  }))
+)
+
+const NotFound = React.lazy(() =>
+  import('./ui/screens/NotFound/NotFound').then((m) => ({
+    default: m.NotFound,
   }))
 )
 
@@ -56,6 +63,7 @@ const RootApp = () => {
           <Route path={LANDING_ROUTES.shelterForm} element={<ShelterForm />} />
           <Route path={LANDING_ROUTES.petDetails} element={<PetDetail />} />
           <Route path={DASHBOARD_ROUTES.dashboard} element={<ShelterProfile />} />
+          <Route path={LANDING_ROUTES.all} element={<NotFound />} />
         </Routes>
       </RouteContext.Provider>
     </React.Suspense>
