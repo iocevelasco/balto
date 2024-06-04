@@ -80,4 +80,4 @@ export async function deleteAdoptionForm(id: string) {
          detail: e,
       };
    }
-}
+};
