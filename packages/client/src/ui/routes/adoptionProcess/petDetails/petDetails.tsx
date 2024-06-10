@@ -1,18 +1,18 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { Box, Container, Flex, Text } from '@radix-ui/themes'
 import { Button } from 'src/ui/design-system/Button'
 import { useNavigate } from 'react-router-dom'
 import type { Pet } from 'src/utils/types/pet'
 import { UnauthenticatedApp } from 'src/ui/layouts/UnauthenticatedApp'
-import { LANDING_ROUTES } from 'src/App'
+import { routes } from 'src/utils/constants/routes'
 import { ImageContainer } from './components/ImageContainer'
 import { Attribute } from './components/Attribute'
 import mocks from 'src/mocks/pet-detail.json'
 
 const PetDetails = () => {
   const navigate = useNavigate()
-  const goBack = () => navigate(`${LANDING_ROUTES.home}`)
+  const goBack = () => navigate(`${routes.public.home}`)
   const { id: petId } = useParams<{ id: string }>()
   const [isLoading, setIsLoaded] = useState(true)
   const [pet, _] = useState<Pet>(mocks as Pet)
@@ -22,13 +22,6 @@ const PetDetails = () => {
       setIsLoaded(false)
     }, 500)
   }, [])
-
-  const onRedirectToForm = () =>
-    navigate(`/${LANDING_ROUTES.adoptionForm}`, {
-      state: {
-        petId: petId,
-      },
-    })
 
   return (
     <UnauthenticatedApp isLoading={isLoading}>
@@ -78,7 +71,13 @@ const PetDetails = () => {
                 <Attribute label="Shelter" value={pet.rescueOrganization} />
                 <Attribute label="contact Information" value={pet.contactInformation} />
                 <Attribute label="medical History" value={pet.medicalHistory} />
-                <Button onClick={onRedirectToForm}>Start Adoption process</Button>
+                <Link
+                  to={{
+                    pathname: `/${routes.public.adoptionProcess.adoptionForm}/${petId}`,
+                  }}
+                >
+                  <Button>Start Adoption process</Button>
+                </Link>
               </Flex>
             </Box>
           </Flex>

@@ -1,4 +1,4 @@
-import { FormWrapper } from './components/FormWrapper'
+import { FormWrapper } from './components/formWrapper'
 import { UnauthenticatedApp } from 'src/ui/layouts/UnauthenticatedApp'
 import { Box, Container, Flex } from '@radix-ui/themes'
 

@@ -1,4 +1,4 @@
-import { PetCardContainer } from './CardPetContainer'
+import { PetCardContainer } from './cardPetContainer'
 import { Container, Grid } from '@radix-ui/themes'
 import type { Pet } from 'src/utils/types/pet'
 import mocks from 'src/mocks/pets.json'

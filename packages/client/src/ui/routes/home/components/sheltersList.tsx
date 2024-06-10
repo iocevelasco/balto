@@ -1,4 +1,4 @@
-import { PetCardContainer } from './CardPetContainer'
+import { PetCardContainer } from './cardPetContainer'
 import { Container, Flex, Grid, Text, Box, Inset } from '@radix-ui/themes'
 import mocks from 'src/mocks/shelters-mock.json'
 import {

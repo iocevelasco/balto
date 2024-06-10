@@ -1,5 +1,6 @@
 import { Flex, Text, Box } from '@radix-ui/themes'
 import { Button } from 'src/ui/design-system/Button'
+import { Link } from 'react-router-dom'
 import { useAppSelector } from 'src/config/store'
 import { Avatar } from 'src/ui/design-system/Avatar'
 import { selectUser } from 'src/config/store/slices'
@@ -15,6 +16,7 @@ import {
   DrawerTrigger,
 } from 'src/ui/design-system/Drawer'
 import { useAuth } from 'src/utils/hooks/useAuth'
+import { routes } from 'src/utils/constants/routes'
 
 const UserDrawer = () => {
   const userProps = useAppSelector(selectUser)
@@ -44,8 +46,6 @@ const UserDrawer = () => {
           </Flex>
           <Flex direction="column" justify="center" gap="4">
             <ModalConfirmCreateShelter />
-            <Button className="flex gap-3">Signed as shelter</Button>
-            <Button className="flex gap-3">Signed as shelter</Button>
           </Flex>
         </Box>
         <DrawerFooter>

@@ -1,8 +1,8 @@
 import { UnauthenticatedApp } from 'src/ui/layouts/UnauthenticatedApp'
-import { PetList } from './components/PetsList'
+import { PetList } from './components/petsList'
 import { Flex, Text } from '@radix-ui/themes'
 import { HeroBanner } from 'src/ui/components/HeroBanner'
-import { SheltersList } from './components/SheltersList'
+import { SheltersList } from './components/sheltersList'
 
 function HomeScreen() {
   return (
