@@ -1,12 +1,12 @@
 import { UnauthenticatedApp } from 'src/ui/layouts/UnauthenticatedApp'
-import { PetList } from './components/PetsList'
+import { PetList } from './components/petsList'
 import { Flex, Text } from '@radix-ui/themes'
 import { HeroBanner } from 'src/ui/components/HeroBanner'
-import { SheltersList } from './components/SheltersList'
+import { SheltersList } from './components/sheltersList'
 
 function HomeScreen() {
   return (
-    <UnauthenticatedApp>
+    <>
       <HeroBanner
         headline="Find Your Perfect Companion at Our Pet Shelter"
         subheadline="Explore our lovingly cared for animals waiting for their forever homes. Adopt, don't shop, and make a difference in a pet's life today"
@@ -36,7 +36,7 @@ function HomeScreen() {
       >
         <SheltersList />
       </Flex>
-    </UnauthenticatedApp>
+    </>
   )
 }
 

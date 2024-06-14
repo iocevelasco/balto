@@ -2,34 +2,34 @@ import { Card, Text, Box, Inset, Flex } from '@radix-ui/themes'
 import { MapPinIcon } from '@heroicons/react/24/solid'
 import { Button } from 'src/ui/design-system/Button'
 import type { Pet } from 'src/utils/types/pet'
+import { Link } from 'react-router-dom'
 
 interface BaseCardProps {
-  onClick: () => void
+  redirectUrl: string
   children?: React.ReactNode | React.ReactNode[]
   thumbnail?: React.ReactNode
-  link: boolean
 }
 
 const BaseCard = (props: BaseCardProps) => {
   return (
     <Box>
-      <button type="button" className="w-full" onClick={props.onClick}>
-        <Card size="2" className="hover:bg-yellow-100 hover:drop-shadow-lg border-transparent">
-          <Flex gap="1" direction="column">
-            <Inset clip="padding-box" className="h-96" side="top" pb="current">
-              {props.thumbnail || <Box></Box>}
-            </Inset>
-            {props.children}
+      <Card size="2" className="hover:bg-yellow-100 hover:drop-shadow-lg border-transparent">
+        <Flex gap="1" direction="column">
+          <Inset clip="padding-box" className="h-96" side="top" pb="current">
+            {props.thumbnail || <Box></Box>}
+          </Inset>
+          {props.children}
+          <Link to={props.redirectUrl}>
             <Button className="mt-4">Adopt</Button>
-          </Flex>
-        </Card>
-      </button>
+          </Link>
+        </Flex>
+      </Card>
     </Box>
   )
 }
 
 interface PetCardProps {
-  onClick: () => void
+  redirectUrl: string
   petDetails: Pet
 }
 
@@ -49,7 +49,7 @@ const PetCard = (props: PetCardProps) => {
   )
 
   return (
-    <BaseCard thumbnail={image} onClick={props.onClick}>
+    <BaseCard thumbnail={image} redirectUrl={props.redirectUrl}>
       <Flex direction="column">
         <Text weight="medium" size="6">
           {props.petDetails.name}

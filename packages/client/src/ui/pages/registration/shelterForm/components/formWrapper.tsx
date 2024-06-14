@@ -16,7 +16,7 @@ import {
 } from 'src/ui/components/Form'
 import { Input } from 'src/ui/design-system/Input'
 import { RadioGroup, RadioGroupItem } from 'src/ui/design-system/RadioGroup'
-import { defaultFormDataSchema, defaultFormData, formFields } from '../AdoptionForm.utils'
+import { defaultFormDataSchema, defaultFormData, formFields } from '../shelterForm.utils'
 import { Label } from 'src/ui/design-system/Label'
 import { PawPrint } from 'lucide-react'
 import { Flex } from '@radix-ui/themes'
@@ -72,7 +72,7 @@ function FormWrapper() {
         <Flex justify="center" className="px-8">
           <Button type="submit" className="w-full md:w-fit px-1 py-1 h-fit">
             <Flex gap="3" align="center" justify="between" className="w-full pl-4">
-              <Text> Submit Adoption </Text>
+              <Text> Create shelter account </Text>
               <Box className="bg-white p-2 rounded-full">
                 <PawPrint size={20} color="hsl(var(--primary))" />
               </Box>

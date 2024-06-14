@@ -11,7 +11,7 @@ import {
   AlertDialogTrigger,
 } from 'src/ui/design-system/AlertDialog'
 import { ButtonWithIcon } from 'src/ui/design-system/Button'
-import { LANDING_ROUTES } from 'src/App'
+import { routes } from 'src/routes/paths'
 import { PawPrint } from 'lucide-react'
 
 export function ModalConfirmCreateShelter() {
@@ -35,7 +35,7 @@ export function ModalConfirmCreateShelter() {
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <Link to={LANDING_ROUTES.shelterForm}>
+          <Link to={routes.public.registration.termsAndConditions}>
             <AlertDialogAction>Continue</AlertDialogAction>
           </Link>
         </AlertDialogFooter>
