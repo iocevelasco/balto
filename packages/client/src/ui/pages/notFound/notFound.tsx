@@ -2,7 +2,7 @@ import { Flex } from '@radix-ui/themes'
 import { Link } from 'react-router-dom'
 import { Button } from 'src/ui/design-system/Button'
 import { UnauthenticatedApp } from 'src/ui/layouts/UnauthenticatedApp'
-import { routes } from 'src/utils/constants/routes'
+import { routes } from 'src/routes/paths'
 
 const NotFound = () => {
   return (

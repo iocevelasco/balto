@@ -10,16 +10,16 @@ export const routes = {
     adoptionProcess: {
       root: 'adoption-process',
       details: {
-        root: 'pet',
-        id: 'pet/:'
+        root: 'adoption-process/pet',
+        id: 'adoption-process/pet/:id'
       },
-      adoptionForm: 'adoption-form',
-      confirmation: 'confirmation',
+      adoptionForm: 'adoption-process/adoption-form',
+      confirmation: 'adoption-process/confirmation',
     },
     all: '*',
   },
   private: {
     dashboard: 'dashboard',
-    adoptionForm: 'shelter-profile',
+    adoptionForm: 'dashboard/shelter-profile',
   }
 }

@@ -4,7 +4,7 @@ import { googleAuthProvider, auth } from 'src/config/firebase/firebase'
 import { signInWithPopup, signOut } from 'firebase/auth'
 import { useAppDispatch, useAppSelector } from 'src/config/store'
 import { selectIsAuth, userAuth } from 'src/config/store/slices/userSlice'
-import { routes } from 'src/utils/constants/routes'
+import { routes } from 'src/routes/paths'
 
 export const OriginPathnameKey = 'originPathname'
 export type LocationState = {

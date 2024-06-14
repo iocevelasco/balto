@@ -11,7 +11,7 @@ import {
   AlertDialogTrigger,
 } from 'src/ui/design-system/AlertDialog'
 import { ButtonWithIcon } from 'src/ui/design-system/Button'
-import { routes } from 'src/utils/constants/routes'
+import { routes } from 'src/routes/paths'
 import { PawPrint } from 'lucide-react'
 
 export function ModalConfirmCreateShelter() {

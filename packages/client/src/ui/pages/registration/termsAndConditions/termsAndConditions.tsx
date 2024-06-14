@@ -48,91 +48,6 @@ const TermsAndConditions = () => {
           </p>
         </section>
 
-        <section ref={definitionsRef}>
-          <h2>Definitions</h2>
-          <ul>
-            <li>
-              <strong>Application:</strong> The software available for mobile devices and/or web
-              access provided by [Name of the Web Application] to facilitate the pet adoption
-              process.
-            </li>
-            <li>
-              <strong>Foundation:</strong> A non-profit organization dedicated to rescuing and
-              adopting pets, registered and using the Application.
-            </li>
-            <li>
-              <strong>Pets:</strong> Animals that are available for adoption through the Application
-              and are under the custody of the Foundation.
-            </li>
-            <li>
-              <strong>Adopter:</strong> A person or family interested in adopting a pet using the
-              Application.
-            </li>
-            <li>
-              <strong>User:</strong> Includes both Foundations and Adopters using the Application.
-            </li>
-          </ul>
-        </section>
-
-        <section ref={registrationRef}>
-          <h2>Registration and Obligations of the Foundation</h2>
-          <ul>
-            <li>
-              <strong>Registration:</strong> The Foundation must provide accurate and complete
-              information when registering in the Application, and update it when necessary. The
-              Foundation guarantees the truthfulness of the information provided.
-            </li>
-            <li>
-              <strong>Content Responsibility:</strong> The Foundation is responsible for the content
-              related to the pets it publishes in the Application, including descriptions, photos,
-              and health data.
-            </li>
-            <li>
-              <strong>Animal Welfare:</strong> The Foundation must ensure that all pets under its
-              care receive the necessary veterinary attention, adequate feeding, and appropriate
-              living conditions until they are adopted.
-            </li>
-            <li>
-              <strong>Adoption Process:</strong> The Foundation must follow the adoption procedure
-              established by the Application, including the evaluation and selection of potential
-              adopters.
-            </li>
-          </ul>
-        </section>
-
-        <section ref={useRef}>
-          <h2>Use of the Application</h2>
-          <ul>
-            <li>
-              <strong>Limited License:</strong> The Application grants the Foundation a limited,
-              non-exclusive, non-transferable license to use the Application in connection with its
-              pet adoption activities.
-            </li>
-            <li>
-              <strong>Prohibitions:</strong> The Foundation agrees not to use the Application for
-              illegal or fraudulent activities, nor to violate the rights of third parties.
-            </li>
-            <li>
-              <strong>Security:</strong> The Foundation must take reasonable measures to maintain
-              the confidentiality and security of its access credentials to the Application.
-            </li>
-          </ul>
-        </section>
-
-        <section ref={dataProtectionRef}>
-          <h2>Data Protection</h2>
-          <ul>
-            <li>
-              <strong>Confidentiality:</strong> The Foundation must handle any personal information
-              obtained through the Application confidentially, respecting privacy policies.
-            </li>
-            <li>
-              <strong>Regulatory Compliance:</strong> The Foundation must comply with all applicable
-              laws and regulations regarding personal data protection.
-            </li>
-          </ul>
-        </section>
-
         <section ref={terminationRef}>
           <h2>Termination and Suspension</h2>
           <ul>
@@ -186,32 +101,6 @@ const TermsAndConditions = () => {
             country where the Application has its main headquarters, without regard to its conflict
             of law principles. Any dispute arising in connection with these Terms will be subject to
             the exclusive jurisdiction of the competent courts of said headquarters.
-          </p>
-        </section>
-
-        <section ref={signaturesRef}>
-          <h2>Signatures</h2>
-          <p>
-            <strong>On behalf of the Foundation:</strong>
-            <br />
-            Name:
-            <br />
-            Position:
-            <br />
-            Signature:
-            <br />
-            Date:
-          </p>
-          <p>
-            <strong>On behalf of the Application:</strong>
-            <br />
-            Name:
-            <br />
-            Position:
-            <br />
-            Signature:
-            <br />
-            Date:
           </p>
         </section>
       </div>

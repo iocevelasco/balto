@@ -16,7 +16,7 @@ import {
   DrawerTrigger,
 } from 'src/ui/design-system/Drawer'
 import { useAuth } from 'src/utils/hooks/useAuth'
-import { routes } from 'src/utils/constants/routes'
+import { routes } from 'src/routes/paths'
 
 const UserDrawer = () => {
   const userProps = useAppSelector(selectUser)

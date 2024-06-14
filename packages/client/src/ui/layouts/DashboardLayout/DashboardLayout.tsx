@@ -1,16 +1,11 @@
 import { Footer } from 'src/ui/components/Footer'
 import { Header } from 'src/ui/components/Header'
 import { Box, Flex } from '@radix-ui/themes'
-import { ReactNode } from 'src/utils/types/commons'
-import { FullScreenSpinLoader } from 'src/ui/design-system/Spinner/SpinLoader'
 import { useAuth } from 'src/utils/hooks/useAuth'
 import { useEffect } from 'react'
+import { Outlet } from 'react-router-dom'
 
-interface UnauthenticatedAppProps extends ReactNode {
-  isLoading?: boolean
-}
-
-const DashboardLayout = (props: UnauthenticatedAppProps) => {
+const DashboardLayout = () => {
   const [isAuthenticated, actions] = useAuth()
 
   useEffect(() => {
@@ -26,7 +21,7 @@ const DashboardLayout = (props: UnauthenticatedAppProps) => {
           <Header />
           <Box className="bg-layout-background h-screen">
             <Flex justify="center" align="center" className="h-full">
-              {props.isLoading ? <FullScreenSpinLoader /> : props.children}
+              <Outlet />
             </Flex>
           </Box>
         </Flex>
@@ -35,7 +30,5 @@ const DashboardLayout = (props: UnauthenticatedAppProps) => {
     </>
   )
 }
-
-export type { UnauthenticatedAppProps }
 
 export { DashboardLayout }

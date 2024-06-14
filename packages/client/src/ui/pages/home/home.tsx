@@ -6,7 +6,7 @@ import { SheltersList } from './components/sheltersList'
 
 function HomeScreen() {
   return (
-    <UnauthenticatedApp>
+    <>
       <HeroBanner
         headline="Find Your Perfect Companion at Our Pet Shelter"
         subheadline="Explore our lovingly cared for animals waiting for their forever homes. Adopt, don't shop, and make a difference in a pet's life today"
@@ -36,7 +36,7 @@ function HomeScreen() {
       >
         <SheltersList />
       </Flex>
-    </UnauthenticatedApp>
+    </>
   )
 }
 

@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Box, Container, Flex, Text } from '@radix-ui/themes'
 import { Button } from 'src/ui/design-system/Button'
 import { useNavigate } from 'react-router-dom'
 import type { Pet } from 'src/utils/types/pet'
-import { UnauthenticatedApp } from 'src/ui/layouts/UnauthenticatedApp'
-import { routes } from 'src/utils/constants/routes'
+import { routes } from 'src/routes/paths'
 import { ImageContainer } from './components/ImageContainer'
 import { Attribute } from './components/Attribute'
 import mocks from 'src/mocks/pet-detail.json'
@@ -14,17 +13,10 @@ const PetDetails = () => {
   const navigate = useNavigate()
   const goBack = () => navigate(`${routes.public.home}`)
   const { id: petId } = useParams<{ id: string }>()
-  const [isLoading, setIsLoaded] = useState(true)
   const [pet, _] = useState<Pet>(mocks as Pet)
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoaded(false)
-    }, 500)
-  }, [])
-
   return (
-    <UnauthenticatedApp isLoading={isLoading}>
+    <>
       <Container
         size="4"
         m={{
@@ -83,7 +75,7 @@ const PetDetails = () => {
           </Flex>
         </Flex>
       </Container>
-    </UnauthenticatedApp>
+    </>
   )
 }
 
