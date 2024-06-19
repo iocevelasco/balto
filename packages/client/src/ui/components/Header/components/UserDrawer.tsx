@@ -1,6 +1,5 @@
 import { Flex, Text, Box } from '@radix-ui/themes'
 import { Button } from 'src/ui/design-system/Button'
-import { Link } from 'react-router-dom'
 import { useAppSelector } from 'src/config/store'
 import { Avatar } from 'src/ui/design-system/Avatar'
 import { selectUser } from 'src/config/store/slices'
@@ -16,7 +15,6 @@ import {
   DrawerTrigger,
 } from 'src/ui/design-system/Drawer'
 import { useAuth } from 'src/utils/hooks/useAuth'
-import { routes } from 'src/routes/paths'
 
 const UserDrawer = () => {
   const userProps = useAppSelector(selectUser)

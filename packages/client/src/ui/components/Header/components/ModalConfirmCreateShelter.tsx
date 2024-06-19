@@ -35,7 +35,7 @@ export function ModalConfirmCreateShelter() {
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <Link to={routes.public.registration.termsAndConditions}>
+          <Link to={routes.public.registration.shelterForm}>
             <AlertDialogAction>Continue</AlertDialogAction>
           </Link>
         </AlertDialogFooter>

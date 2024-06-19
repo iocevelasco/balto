@@ -1,6 +1,6 @@
 interface HeroBannerProps {
   headline: string
-  subheadline: string
+  subheading: string
   backgroundImage: string
 }
 
@@ -14,7 +14,7 @@ const HeroBanner = (props: HeroBannerProps) => {
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl text-white font-bold mb-4">{props.headline}</h1>
-          <p className="text-lg text-white">{props.subheadline}</p>
+          <p className="text-lg text-white">{props.subheading}</p>
         </div>
       </div>
     </div>

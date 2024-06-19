@@ -1,5 +1,3 @@
-'use client'
-
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
@@ -20,6 +18,7 @@ import { defaultFormDataSchema, defaultFormData, formFields } from '../shelterFo
 import { Label } from 'src/ui/design-system/Label'
 import { PawPrint } from 'lucide-react'
 import { Flex } from '@radix-ui/themes'
+import { Checkbox } from 'src/ui/design-system/checkbox'
 
 function FormWrapper() {
   const form = useForm<z.infer<typeof defaultFormDataSchema>>({
@@ -30,7 +29,7 @@ function FormWrapper() {
   function onSubmit(data: z.infer<typeof defaultFormDataSchema>) {
     console.log(`data`, data)
   }
-
+  console.log({ form })
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="w-100 space-y-6">
@@ -69,6 +68,18 @@ function FormWrapper() {
             )}
           />
         ))}
+        <FormField
+          control={form.control}
+          name="termsAndConditions"
+          render={({ field }) => (
+            <FormItem>
+              <Label htmlFor="termsAndConditions">Accept terms and conditions</Label>
+              <FormControl>
+                <Checkbox name={field.name} />
+              </FormControl>
+            </FormItem>
+          )}
+        />
         <Flex justify="center" className="px-8">
           <Button type="submit" className="w-full md:w-fit px-1 py-1 h-fit">
             <Flex gap="3" align="center" justify="between" className="w-full pl-4">

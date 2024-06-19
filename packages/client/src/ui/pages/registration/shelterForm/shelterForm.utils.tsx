@@ -1,17 +1,21 @@
 import { z } from 'zod'
 
+export enum ShelterFormMessages {
+  Title = ' Welcome to Balto, a platform dedicated to facilitating pet adoption through the participation of foundations.',
+}
+
 const defaultFormDataSchema = z.object({
   name: z.string().min(3),
-  description: z.string().min(10),
   phone: z.string().min(5),
   address: z.string().optional(),
-  email: z.string().email().optional(),
+  email: z.string().email(),
+  termsAndConditions: z.boolean(),
 })
 
 const formFields: Input[] = [
   {
     id: 1,
-    label: 'Name:',
+    label: 'Foundation Name:',
     inputType: 'text',
     key: 'name',
   },
@@ -34,13 +38,6 @@ const formFields: Input[] = [
     inputType: 'email',
     key: 'email',
   },
-  {
-    id: 5,
-    label: 'Description',
-    inputType: 'textarea',
-    key: 'description',
-    description: "Specify where you work and how long you've been there",
-  },
 ]
 
 interface Input {
@@ -48,7 +45,7 @@ interface Input {
   label: string
   description?: string
   inputType: 'text' | 'tel' | 'email' | 'textarea' | 'radio' | 'number'
-  key: 'name' | 'phone' | 'address' | 'email' | 'description'
+  key: 'name' | 'phone' | 'address' | 'email'
 }
 
 const defaultFormData = {
@@ -57,6 +54,7 @@ const defaultFormData = {
   address: '',
   email: '',
   description: '',
+  termsAndConditions: false,
 }
 
 export { defaultFormDataSchema, defaultFormData, formFields }
