@@ -6,7 +6,9 @@ import { App } from './App'
 import store, { persistor } from 'src/config/store'
 import { PersistGate } from 'redux-persist/integration/react'
 import { Theme } from '@radix-ui/themes'
+import 'src/config/i18n/config'
 import '@radix-ui/themes/styles.css'
+
 import './globals.css'
 
 void main()
