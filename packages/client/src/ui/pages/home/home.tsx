@@ -1,14 +1,17 @@
+import { useTranslation } from 'react-i18next'
 import { PetList } from './components/petsList'
 import { Flex } from '@radix-ui/themes'
 import { HeroBanner } from 'src/ui/components/HeroBanner'
 import { SheltersList } from './components/sheltersList'
 
 function HomeScreen() {
+  const { t } = useTranslation()
+
   return (
     <>
       <HeroBanner
-        headline="Find Your Perfect Companion at Our Pet Shelter"
-        subheading="Explore our lovingly cared for animals waiting for their forever homes. Adopt, don't shop, and make a difference in a pet's life today"
+        headline={t('home.heroBanner.title')}
+        subheading={t('home.heroBanner.subtitle')}
         backgroundImage="https://www.debt.com/es/wp-content/uploads/2020/01/8-Costs-to-Know-Before-Adopting-a-Pet.jpg"
       />
       <Flex
