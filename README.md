@@ -18,7 +18,7 @@ This monorepo houses a React project using Vite and follows a monorepo architect
 
 ```bash
 git clone <repository-url>
-cd patitas
+cd Balto
 
 Install dependencies:
 yarn install
@@ -28,6 +28,6 @@ Development
 To start the React project in development mode:
 
 yarn workspace client dev
-Open http://localhost:5000 in your browser to view the app.
+Open http://localhost:8080 in your browser to view the app.
 
 

@@ -12,11 +12,11 @@ const definition = {
       url: "https://opensource.org/licenses/MIT",
     },
   },
-  host: "localhost:5000",
+  host: "localhost:8080",
 
   servers: [
     {
-      url: "localhost:5000",
+      url: "localhost:8080",
       description: "Local server",
     },
   ],

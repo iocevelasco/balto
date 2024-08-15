@@ -24,10 +24,6 @@ app.use(
   })
 );
 
-app.get('/', (req: Request, res: Response) => {
-  res.send('Hello, world!');
-});
-
 app.listen(config.port, () =>
   console.log(`Server is live @ ${config.host}:${config.port}`),
 );
