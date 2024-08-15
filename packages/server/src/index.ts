@@ -24,6 +24,11 @@ app.use(
   })
 );
 
+app.get('/swagger.json', (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
+  res.send(definition);
+});
+
 app.listen(config.port, () =>
   console.log(`Server is live @ ${config.host}:${config.port}`),
 );

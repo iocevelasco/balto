@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES2021",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
+    "lib": ["esnext"],
+    "module": "commonjs",
     "skipLibCheck": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -22,6 +22,6 @@
       "mocks/*": ["mocks/*"]
     }
   },
-  "include": ["./src/**/*", "./src/utils/types/**/*", "postcss.config.cjs", "./src/vite-env.d.ts"],
+  "include": ["./src/**/*", "./src/utils/types/**/*", "postcss.config.cjs"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

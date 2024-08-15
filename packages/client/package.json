@@ -2,7 +2,6 @@
   "name": "client",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -29,6 +28,7 @@
     "@radix-ui/react-switch": "^1.0.3",
     "@radix-ui/themes": "^2.0.3",
     "@reduxjs/toolkit": "^2.2.3",
+    "@rtk-query/codegen-openapi": "^1.2.0",
     "@stitches/react": "^1.2.8",
     "@stitches/tailwind": "^9.0.0-alpha.8",
     "@vitejs/plugin-react": "^4.2.1",
