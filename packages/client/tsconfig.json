@@ -19,9 +19,9 @@
     "declaration": true,
     "paths": {
       "src/*": ["src/*"],
-      "mocks/*": ["mocks/*"],
+      "mocks/*": ["mocks/*"]
     }
   },
-  "include": ["./src/**/*", "./src/utils/types/**/*", "postcss.config.cjs"],
+  "include": ["./src/**/*", "./src/utils/types/**/*", "postcss.config.cjs", "./src/vite-env.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

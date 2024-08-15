@@ -1,4 +1,3 @@
-import { lazy } from 'react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { FullScreenSpinLoader } from './ui/design-system/Spinner/SpinLoader'
 import { routes } from 'src/routes/paths'
