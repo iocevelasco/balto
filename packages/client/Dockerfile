@@ -1,12 +1,13 @@
 FROM node:18-alpine
-WORKDIR /app
+WORKDIR /usr/src/app
 
-RUN yarn global add typescript
-RUN yarn global add vite
-
-COPY ./package.json ./
+COPY package*.json ./
 
 RUN yarn install
+
 COPY . .
 
-CMD ["yarn", "dev"]
+CMD [ "yarn", "start" ]
+
+# Expose the port.
+EXPOSE 8080

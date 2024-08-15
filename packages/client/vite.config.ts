@@ -16,6 +16,7 @@ export default defineConfig({
       "mocks": path.resolve(__dirname, "./mocks"),
       "@": path.resolve(__dirname, "./@"),
     },
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   define: {
     'process.env': {},
