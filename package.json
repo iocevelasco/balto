@@ -13,7 +13,7 @@
     "main": "yarn packages client dev",
     "dev:client": "yarn workspace client dev",
     "build:client": "yarn workspace client build",
-    "dev:server": "yarn workspace server start"
+    "dev:server": "yarn workspace server dev"
   },
   "devDependencies": {
     "typescript": "^5.3.3",
