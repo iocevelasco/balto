@@ -1,25 +1,51 @@
 {
-  "name": "balto",
+  "name": "pet-adoption-platform",
   "version": "1.0.0",
-  "license": "MIT",
+  "description": "Pet Adoption Platform - Full Stack Application with API and Client",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "api",
+    "client"
   ],
-  "engines": {
-    "node": "^18.18.0"
-  },
   "scripts": {
-    "main": "yarn packages client dev",
-    "dev:client": "yarn workspace client dev",
-    "build:client": "yarn workspace client build",
-    "dev:server": "yarn workspace server dev"
+    "dev": "concurrently --names \"API,CLIENT\" --prefix-colors \"blue,green\" \"npm run dev:api\" \"npm run dev:client\"",
+    "dev:api": "npm run dev --workspace=api",
+    "dev:client": "npm run dev --workspace=client",
+    "start": "npm run start --workspace=api",
+    "start:api": "npm run start --workspace=api",
+    "start:client": "npm run start --workspace=client",
+    "build": "npm run build --workspace=client",
+    "build:client": "npm run build --workspace=client",
+    "build:all": "npm run build:client",
+    "test": "npm run test --workspaces",
+    "test:api": "npm run test --workspace=api",
+    "test:client": "npm run test --workspace=client",
+    "test:endpoints": "npm run test:endpoints --workspace=api",
+    "test:connection": "npm run test:api --workspace=client",
+    "lint": "npm run lint --workspaces",
+    "lint:fix": "npm run lint:fix --workspaces",
+    "clean": "npm run clean --workspaces --if-present && rm -rf node_modules",
+    "install:all": "npm install && npm install --workspaces",
+    "setup": "npm run install:all",
+    "reset": "npm run clean && npm run install:all"
   },
+  "keywords": [
+    "pet-adoption",
+    "fullstack",
+    "react",
+    "nodejs",
+    "express",
+    "mongodb",
+    "tanstack-query",
+    "nextjs"
+  ],
+  "author": "Pet Adoption Team",
+  "license": "MIT",
   "devDependencies": {
-    "typescript": "^5.3.3",
-    "typescript-node": "^0.1.3"
+    "concurrently": "^8.2.2"
   },
-  "volta": {
-    "node": "18.18.0"
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
   }
 }
